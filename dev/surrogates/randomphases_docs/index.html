@@ -906,21 +906,30 @@
 <h2 id="documentation">Documentation</h2>
 <p><a id='TimeseriesSurrogates.randomphases' href='#TimeseriesSurrogates.randomphases'>#</a>
 <strong><code>TimeseriesSurrogates.randomphases</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>randomphases(ts::AbstractArray{T, 1} where T)
+</code></pre>
+
+<p>Create a random phases surrogate for <code>ts</code> [1]. Surrogate realizations using the phase surrogates have the same linear correlation, or periodogram, as the original data.</p>
+<p><strong><code>ts</code></strong> Is the time series for which to generate an AAFT surrogate realization.</p>
+<p><strong>Literature references</strong></p>
+<ol>
+<li>J. Theiler et al., Physica D <em>58</em> (1992) 77-94 (1992).</li>
+</ol>
 <pre><code>randomphases(a::AbstractArray{Number, 2}, cols = 1:size(d, 2))
 </code></pre>
 
 <p>Column-wise random phases Fourier surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L36-L42' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L36-L42' class='documenter-source'>source</a><br></p>
 <pre><code>randomphases(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </code></pre>
 
 <p>Column-wise random phases Fourier surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L147-L152' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L147-L152' class='documenter-source'>source</a><br></p>
 <pre><code>randomphases(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Column-wise random phases Fourier surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L262-L267' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L262-L267' class='documenter-source'>source</a><br></p>
                 
                   
                 

@@ -906,21 +906,38 @@
 <h2 id="documentation">Documentation</h2>
 <p><a id='TimeseriesSurrogates.iaaft' href='#TimeseriesSurrogates.iaaft'>#</a>
 <strong><code>TimeseriesSurrogates.iaaft</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>iaaft(ts::AbstractArray{T, 1} where T;
+        n_maxiter = 200, tol = 1e-6, n_windows = 50)
+</code></pre>
+
+<p>Generate an iteratively adjusted amplitude adjusted Fourier transform (IAAFT) [1] surrogate realization of <code>ts</code>.</p>
+<p><strong>Arguments</strong></p>
+<ul>
+<li><strong><code>ts</code></strong> is the time series for which to generate an AAFT surrogate realization.</li>
+<li><strong><code>n_maxiter</code></strong> sets the maximum number of iterations to allow before ending   the algorithm (if convergence is slow).</li>
+<li><strong><code>tol</code></strong> is the relative tolerance for deciding if convergence is achieved.</li>
+<li><strong><code>n_window</code></strong> is the number is windows used when binning the periodogram (used   for determining convergence).</li>
+</ul>
+<p><strong>Literature references</strong></p>
+<ol>
+<li>T. Schreiber; A. Schmitz (1996). "Improved Surrogate Data for Nonlinearity</li>
+</ol>
+<p>Tests". Phys. Rev. Lett. 77 (4): 635–638. doi:10.1103/PhysRevLett.77.635. PMID 10062864.</p>
 <pre><code>iaaft(a::AbstractArray{Number, 2}; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L101-L107' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L101-L107' class='documenter-source'>source</a><br></p>
 <pre><code>iaaft(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </code></pre>
 
 <p>Column-wise iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L212-L217' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L212-L217' class='documenter-source'>source</a><br></p>
 <pre><code>iaaft(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L324-L329' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L324-L329' class='documenter-source'>source</a><br></p>
                 
                   
                 

@@ -906,21 +906,30 @@
 <h2 id="documentation">Documentation</h2>
 <p><a id='TimeseriesSurrogates.aaft' href='#TimeseriesSurrogates.aaft'>#</a>
 <strong><code>TimeseriesSurrogates.aaft</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>aaft(ts::AbstractArray{T, 1} where T)
+</code></pre>
+
+<p>Generate a realization of an amplitude adjusted Fourier transform (AAFT) surrogate [1].</p>
+<p><strong><code>ts</code></strong> Is the time series for which to generate an AAFT surrogate realization.</p>
+<p><strong>Literature references</strong></p>
+<ol>
+<li>J. Theiler et al., Physica D <em>58</em> (1992) 77-94 (1992).</li>
+</ol>
 <pre><code>aaft(a::AbstractArray{Number, 2}; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L80-L86' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L80-L86' class='documenter-source'>source</a><br></p>
 <pre><code>aaft(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </code></pre>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L192-L197' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L192-L197' class='documenter-source'>source</a><br></p>
 <pre><code>aaft(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/91a647a8e4cadccb88feaac6f5a7e495c7aebdfa/src/surrogates/surrogates.jl#L304-L309' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/e4bdd67da3765f3e415c21618c201d4a9a67e7cc/src/surrogates/surrogates.jl#L304-L309' class='documenter-source'>source</a><br></p>
                 
                   
                 
