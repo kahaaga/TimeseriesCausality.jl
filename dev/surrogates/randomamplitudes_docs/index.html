@@ -906,6 +906,22 @@
 <h2 id="documentation">Documentation</h2>
 <p><a id='TimeseriesSurrogates.randomamplitudes' href='#TimeseriesSurrogates.randomamplitudes'>#</a>
 <strong><code>TimeseriesSurrogates.randomamplitudes</code></strong> &mdash; <em>Function</em>.</p>
+<pre><code>randomamplitudes(a::AbstractArray{Number, 2}; cols = 1:size(d, 2))
+</code></pre>
+
+<p>Column-wise random amplitude Fourier surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L58-L64' class='documenter-source'>source</a><br></p>
+<pre><code>randomamplitudes(E::Embeddings.AbstractEmbedding;
+                    cols = 1:size(E.points, 1))
+</code></pre>
+
+<p>Column-wise random amplitude Fourier surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L169-L175' class='documenter-source'>source</a><br></p>
+<pre><code>randomamplitudes(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
+</code></pre>
+
+<p>Column-wise random amplitude Fourier surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L283-L288' class='documenter-source'>source</a><br></p>
 <pre><code>randomamplitudes(ts::AbstractArray{T, 1} where T)
 </code></pre>
 
@@ -916,22 +932,6 @@
 <ol>
 <li>J. Theiler et al., Physica D <em>58</em> (1992) 77-94 (1992))</li>
 </ol>
-<pre><code>randomamplitudes(a::AbstractArray{Number, 2}; cols = 1:size(d, 2))
-</code></pre>
-
-<p>Column-wise random amplitude Fourier surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/bfe2f7dd657c259314a8202263853ade44366098/src/surrogates/surrogates.jl#L58-L64' class='documenter-source'>source</a><br></p>
-<pre><code>randomamplitudes(E::Embeddings.AbstractEmbedding;
-                    cols = 1:size(E.points, 1))
-</code></pre>
-
-<p>Column-wise random amplitude Fourier surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/bfe2f7dd657c259314a8202263853ade44366098/src/surrogates/surrogates.jl#L169-L175' class='documenter-source'>source</a><br></p>
-<pre><code>randomamplitudes(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
-</code></pre>
-
-<p>Column-wise random amplitude Fourier surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/bfe2f7dd657c259314a8202263853ade44366098/src/surrogates/surrogates.jl#L283-L288' class='documenter-source'>source</a><br></p>
                 
                   
                 

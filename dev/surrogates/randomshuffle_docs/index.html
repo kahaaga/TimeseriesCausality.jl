@@ -906,27 +906,27 @@
 <h2 id="documentation">Documentation</h2>
 <p><a id='TimeseriesSurrogates.randomshuffle' href='#TimeseriesSurrogates.randomshuffle'>#</a>
 <strong><code>TimeseriesSurrogates.randomshuffle</code></strong> &mdash; <em>Function</em>.</p>
-<pre><code>randomshuffle(ts::AbstractArray{T, 1} where T)
-</code></pre>
-
-<p>Generate a random constrained surrogate for <code>ts</code>. Destroys any linear correlation in the signal, but preserves its amplitude distribution.</p>
-<p><strong><code>ts</code></strong> Is the time series for which to generate an AAFT surrogate realization.</p>
 <pre><code>randomshuffle(a::AbstractArray{Number, 2}; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Column-wise random shuffle surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/bfe2f7dd657c259314a8202263853ade44366098/src/surrogates/surrogates.jl#L14-L20' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L14-L20' class='documenter-source'>source</a><br></p>
 <pre><code>randomshuffle(E::Embeddings.AbstractEmbedding;
                 cols = 1:size(E.points, 1))
 </code></pre>
 
 <p>Column-wise random shuffle surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/bfe2f7dd657c259314a8202263853ade44366098/src/surrogates/surrogates.jl#L125-L131' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L125-L131' class='documenter-source'>source</a><br></p>
 <pre><code>randomshuffle(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Column-wise random shuffle surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/bfe2f7dd657c259314a8202263853ade44366098/src/surrogates/surrogates.jl#L241-L246' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L241-L246' class='documenter-source'>source</a><br></p>
+<pre><code>randomshuffle(ts::AbstractArray{T, 1} where T)
+</code></pre>
+
+<p>Generate a random constrained surrogate for <code>ts</code>. Destroys any linear correlation in the signal, but preserves its amplitude distribution.</p>
+<p><strong><code>ts</code></strong> Is the time series for which to generate an AAFT surrogate realization.</p>
                 
                   
                 
