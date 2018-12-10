@@ -910,17 +910,17 @@
 </code></pre>
 
 <p>Iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L101-L107' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4869edcf8c54c6407713cb494ad0bd6e53191254/src/surrogates/surrogates.jl#L101-L107' class='documenter-source'>source</a><br></p>
 <pre><code>iaaft(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </code></pre>
 
 <p>Column-wise iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L212-L217' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4869edcf8c54c6407713cb494ad0bd6e53191254/src/surrogates/surrogates.jl#L212-L217' class='documenter-source'>source</a><br></p>
 <pre><code>iaaft(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L324-L329' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4869edcf8c54c6407713cb494ad0bd6e53191254/src/surrogates/surrogates.jl#L324-L329' class='documenter-source'>source</a><br></p>
 <pre><code>iaaft(ts::AbstractArray{T, 1} where T;
         n_maxiter = 200, tol = 1e-6, n_windows = 50)
 </code></pre>

@@ -910,17 +910,17 @@
 </code></pre>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L80-L86' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4869edcf8c54c6407713cb494ad0bd6e53191254/src/surrogates/surrogates.jl#L80-L86' class='documenter-source'>source</a><br></p>
 <pre><code>aaft(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </code></pre>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L192-L197' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4869edcf8c54c6407713cb494ad0bd6e53191254/src/surrogates/surrogates.jl#L192-L197' class='documenter-source'>source</a><br></p>
 <pre><code>aaft(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </code></pre>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/99f5bf76cc8ae49225c5f032d740c4f0fedc69c6/src/surrogates/surrogates.jl#L304-L309' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4869edcf8c54c6407713cb494ad0bd6e53191254/src/surrogates/surrogates.jl#L304-L309' class='documenter-source'>source</a><br></p>
 <pre><code>aaft(ts::AbstractArray{T, 1} where T)
 </code></pre>
 
