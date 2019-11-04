@@ -40,7 +40,7 @@
     
     
       
-        <title>TransferOperatorGridTest - CausalityTools.jl</title>
+        <title>ExactSimplexIntersectionTest - CausalityTools.jl</title>
       
     
     
@@ -118,7 +118,7 @@
                 CausalityTools.jl
               </span>
               <span class="md-header-nav__topic">
-                TransferOperatorGridTest
+                ExactSimplexIntersectionTest
               </span>
             
           
@@ -431,18 +431,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="TransferOperatorGridTest" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../TransferOperatorGridTest/" title="TransferOperatorGridTest" class="md-nav__link">
       TransferOperatorGridTest
     </a>
-    
   </li>
 
         
@@ -474,11 +467,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ExactSimplexIntersectionTest/" title="ExactSimplexIntersectionTest" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="ExactSimplexIntersectionTest" class="md-nav__link md-nav__link--active">
       ExactSimplexIntersectionTest
     </a>
+    
   </li>
 
         
@@ -1212,23 +1212,25 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kahaaga/CausalityTools.jl/edit/master/docs/causalitytests/TransferOperatorGridTest.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/kahaaga/CausalityTools.jl/edit/master/docs/causalitytests/ExactSimplexIntersectionTest.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>TransferOperatorGridTest</h1>
+                  <h1>ExactSimplexIntersectionTest</h1>
                 
-                <p><a id='CausalityTools.CausalityTests.TransferOperatorGridTest' href='#CausalityTools.CausalityTests.TransferOperatorGridTest'>#</a>
-<strong><code>CausalityTools.CausalityTests.TransferOperatorGridTest</code></strong> &mdash; <em>Type</em>.</p>
-<div class="highlight"><pre><span></span><span class="n">TransferOperatorGridTest</span><span class="p">(</span><span class="n">k</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">l</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">m</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
-    <span class="n">τ</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">estimator</span><span class="o">::</span><span class="n">TransferOperatorGrid</span> <span class="o">=</span> <span class="n">TransferOperatorGrid</span><span class="p">(),</span> 
-    <span class="n">binning_summary_statistic</span><span class="o">::</span><span class="kt">Function</span> <span class="o">=</span> <span class="n">StatsBase</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span>
-    <span class="n">binning</span><span class="o">::</span><span class="n">RectangularBinning</span><span class="p">,</span> <span class="n">ηs</span><span class="p">)</span>
+                <p><a id='CausalityTools.CausalityTests.ExactSimplexIntersectionTest' href='#CausalityTools.CausalityTests.ExactSimplexIntersectionTest'>#</a>
+<strong><code>CausalityTools.CausalityTests.ExactSimplexIntersectionTest</code></strong> &mdash; <em>Type</em>.</p>
+<div class="highlight"><pre><span></span><span class="n">ExactSimplexIntersectionTest</span>
 </pre></div>
 
-<p>The parameters for a transfer entropy test using the <code>TransferOperatorGrid</code> estimator [1].</p>
+<p>The parameters for a transfer entropy test where the invariant measure is estimated using an approximation to the transfer operator over a triangulation of the delay reconstruction [1]. Essentially, this allows the generation of an unlimited amount of points from the transfer operator. Transfer entropy then can be estimated by superimposing a rectangular grid as usual over the points generated from the  transfer operator.</p>
+<p><strong>Notes</strong></p>
+<ul>
+<li>Compared to the rectangular estimators, the exact simplex intersection approach is much slower.   However, it might be beneficial for sparse time series[1].   A faster triangulation estimator is the <code>ApproximateSimplexIntersectionTest</code>.</li>
+<li>If you're doing any sort of sensitivity analysis over binning schemes, then use the low-level   estimators to first construct the invariant measure over the triangulation. You can then   estimate transfer entropy "for free" from the points you generate from the triangulation.   Over these points you can superimpose any grid you want and quickly compute transfer entropy   using one of the rectangular estimators.</li>
+</ul>
 <p><strong>Mandatory keyword arguments</strong></p>
 <ul>
-<li><strong><code>binning::RectangularBinning</code></strong>: An instance of a <a href="../../causalitytoolsbase/discretization/#CausalityToolsBase.RectangularBinning"><code>RectangularBinning</code></a> that dictates    how the delay embedding is discretized.</li>
+<li><strong><code>binning::RectangularBinning</code></strong>: An instance of a <a href="../../causalitytoolsbase/discretization/#CausalityToolsBase.RectangularBinning"><code>RectangularBinning</code></a> that dictates   how the delay embedding is discretized.</li>
 <li><strong><code>ηs</code></strong>: The prediction lags (that gos into the <span><span class="MathJax_Preview">T_{f}</span><script type="math/tex">T_{f}</script></span> component of the embedding).</li>
 </ul>
 <p><strong>Optional keyword arguments</strong></p>
@@ -1239,102 +1241,36 @@
 <li><strong><code>n::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">C_{pp}</span><script type="math/tex">C_{pp}</script></span> component of the embedding.</li>
 <li><strong><code>τ::Int</code></strong>: The embedding lag. Default is <code>τ = 1</code>.</li>
 <li><strong><code>b</code></strong>: Base of the logarithm. The default (<code>b = 2</code>) gives the TE in bits.</li>
-<li><strong><code>estimator::VisitationFrequency</code></strong>: A <code>VisitationFrequency</code> estimator instance.</li>
-<li><strong><code>binning_summary_statistic::Function</code></strong>: A summary statistic to summarise the    transfer entropy values if multiple binnings are provided.</li>
+<li><strong><code>estimator::Union{VisitationFrequency, TransferOperatorGrid}</code></strong>: A <code>VisitationFrequency</code>   or a <code>TransferOperatorGrid</code> estimator instance.</li>
+<li><strong><code>n_pts::Int</code></strong>: The number of points to generate from the invariant distribution   over the triangulation. It is over these points transfer entropy is finally   generated using the provided rectangular <code>estimator</code>. Defaults to <code>n_pts = 10000</code>.</li>
+<li><strong><code>binning_summary_statistic::Function</code></strong>: A summary statistic to summarise the   transfer entropy values if multiple binnings are provided.</li>
 </ul>
-<p><strong>Estimation of the invariant measure</strong></p>
-<p>With a <code>TransferOperatorGridTest</code>, the first step is to compute an approximation to the  <a href="../@ref transfer_operator_rectangular">transfer operator</a> over the partition elements of a rectangular <a href="../../causalitytoolsbase/discretization/#discretization-1">discretization</a>  of an appropriate <a href="../../causalitytoolsbase/delay_reconstructions/#custom_delay_reconstruction-1">delay reconstruction</a> of the time  series to be analysed. Transfer entropy is then computed from the <a href="../@ref invariant_measure_rectangular">invariant  distribution</a> arising from the transfer operator. </p>
-<p><strong>About the delay reconstruction for transfer entropy analysis</strong></p>
-<p>Denote the time series for the source process <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> as <span><span class="MathJax_Preview">S(t)</span><script type="math/tex">S(t)</script></span>, and the time series for  the target process <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> as <span><span class="MathJax_Preview">T(t)</span><script type="math/tex">T(t)</script></span>, and <span><span class="MathJax_Preview">C_i(t)</span><script type="math/tex">C_i(t)</script></span> as the time series for any conditional  processes <span><span class="MathJax_Preview">C_i</span><script type="math/tex">C_i</script></span> that also may influence <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span>. To compute (conditional) TE, we need a  generalised embedding [3, 4] incorporating all of these processes.</p>
-<p>For convenience, define the state vectors</p>
-<div>
-<div class="MathJax_Preview">
-\begin{align}
-T_f^{(k)} &amp;= \{(T(t+\eta_k), \ldots, T(t+\eta_2), T(t+\eta_1))\}, \label{eq:Tf} \\
-T_{pp}^{(l)} &amp;= \{ (T(t), T(t-\tau_1), T(t-\tau_2), \ldots, T(t - \tau_{l - 1})) \\
-S_{pp}^{(m)} &amp;= \{(S(t), S(t-\tau_1), S(t-\tau_2), \ldots, S(t-\tau_{m - 1}))\},\\
-C_{pp}^{(n)} &amp;= \{ (C_1(t), C_1(t-\tau_1), \ldots,  C_2(t), C_2(t-\tau_1) \},
-\end{align}
-</div>
-<script type="math/tex; mode=display">
-\begin{align}
-T_f^{(k)} &= \{(T(t+\eta_k), \ldots, T(t+\eta_2), T(t+\eta_1))\}, \label{eq:Tf} \\
-T_{pp}^{(l)} &= \{ (T(t), T(t-\tau_1), T(t-\tau_2), \ldots, T(t - \tau_{l - 1})) \\
-S_{pp}^{(m)} &= \{(S(t), S(t-\tau_1), S(t-\tau_2), \ldots, S(t-\tau_{m - 1}))\},\\
-C_{pp}^{(n)} &= \{ (C_1(t), C_1(t-\tau_1), \ldots,  C_2(t), C_2(t-\tau_1) \},
-\end{align}
-</script>
-</div>
-<p>where the state vectors <span><span class="MathJax_Preview">T_f^{(k)}</span><script type="math/tex">T_f^{(k)}</script></span> contain <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> future values of the target  variable, <span><span class="MathJax_Preview">T_{pp}^{(l)}</span><script type="math/tex">T_{pp}^{(l)}</script></span> contain <span><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> present and past values of the target  variable, <span><span class="MathJax_Preview">S_{pp}^{(m)}</span><script type="math/tex">S_{pp}^{(m)}</script></span> contain <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> present and past values of the source  variable, <span><span class="MathJax_Preview">C_{pp}^{(n)}</span><script type="math/tex">C_{pp}^{(n)}</script></span> contain a total of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> present and past values of any  conditional variable(s).  Combining all variables, we have the generalised embedding </p>
-<div>
-<div class="MathJax_Preview">
-\begin{align}
-\mathbb{E} = (T_f^{(k)}, T_{pp}^{(l)}, S_{pp}^{(m)}, C_{pp}^{(n)})
-\end{align}
-</div>
-<script type="math/tex; mode=display">
-\begin{align}
-\mathbb{E} = (T_f^{(k)}, T_{pp}^{(l)}, S_{pp}^{(m)}, C_{pp}^{(n)})
-\end{align}
-</script>
-</div>
-<p>with a total embedding dimension of <span><span class="MathJax_Preview">k + l + m + n</span><script type="math/tex">k + l + m + n</script></span>.  Here, <span><span class="MathJax_Preview">\tau</span><script type="math/tex">\tau</script></span> indicates the <a href="../../causalitytoolsbase/delay_reconstructions/#custom_delay_reconstruction-1">embedding</a> lag  (in the <code>VisitationFrequencyTest</code>, we set <span><span class="MathJax_Preview">\tau_1 = \tau_2 = \tau_3 = \ldots</span><script type="math/tex">\tau_1 = \tau_2 = \tau_3 = \ldots</script></span>), and <span><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span> indicates the prediction lag (the lag of the influence the source  has on the target). </p>
-<p>Hence, in the generalised embedding, only <span><span class="MathJax_Preview">T_f</span><script type="math/tex">T_f</script></span> depends on the prediction lag <span><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span>,  which is to be determined by the analyst. For transfer entropy analysis, <span><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span> is chosen  to be some positive integer, while for  <a href="../PredictiveAsymmetryTest/#predictive_asymmetry-1">predictive asymmetry analysis</a>,  symmetric negative and positive <span><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span>s are used for computing <span><span class="MathJax_Preview">\mathbb{A}</span><script type="math/tex">\mathbb{A}</script></span>.  </p>
-<p>In terms of this generalised embedding, transfer entropy from a source variable <span><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> to a  target variable <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> with conditioning on variable(s) <span><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> is thus defined as </p>
-<div>
-<div class="MathJax_Preview">
-\begin{align}
-TE_{S \rightarrow T|C} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}, C_{pp}) \log_{2}{\left( \frac{P(T_f | T_{pp}, S_{pp}, C_{pp})}{P(T_f | T_{pp}, C_{pp})}\right)}
-\end{align}
-</div>
-<script type="math/tex; mode=display">
-\begin{align}
-TE_{S \rightarrow T|C} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}, C_{pp}) \log_{2}{\left( \frac{P(T_f | T_{pp}, S_{pp}, C_{pp})}{P(T_f | T_{pp}, C_{pp})}\right)}
-\end{align}
-</script>
-</div>
-<p>Without conditioning, we have </p>
-<div>
-<div class="MathJax_Preview">
-\begin{align}
-TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}) \log_{2}{\left(\frac{P(T_f | T_{pp}, S_{pp})}{P(T_f | T_{pp})}\right)}
-\end{align}
-</div>
-<script type="math/tex; mode=display">
-\begin{align}
-TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}) \log_{2}{\left(\frac{P(T_f | T_{pp}, S_{pp})}{P(T_f | T_{pp})}\right)}
-\end{align}
-</script>
-</div>
-<p><strong>Low-level estimator</strong></p>
-<p>This test uses the <code>TransferOperatorGrid</code> estimator on the following low-level method  under the hood. </p>
-<ul>
-<li><a href="../@ref"><code>transferentropy(::Any, ::TEVars, ::RectangularBinning, ::TransferEntropyEstimator)</code></a></li>
-</ul>
-<p>In this estimator, the mapping between variables of the  <a href="../../causalitytoolsbase/delay_reconstructions/#custom_delay_reconstruction-1">generalised embedding</a> and the marginals during  transfer entropy computation is controlled using a <a href="../../transferentropy/TEVars/#TransferEntropy.TEVars"><code>TEVars</code></a>  instance. It is <em>highly</em> recommended that you check the documentation for this  method, because it describes the transfer entropy estimation procedure in detail.</p>
-<p><strong>Notes:</strong></p>
-<ul>
-<li>Use <code>causality(source, target, params::TransferOperatorGridTest)</code> for regular    transfer entropy analysis. This method uses only the <code>k</code>, <code>l</code>, <code>m</code> and ignores <code>n</code>    when constructing the delay reconstruction.</li>
-<li>Use <code>causality(source, target, cond, params::TransferOperatorGridTest)</code> for conditional    transfer entropy analysis. This method uses the <code>k</code>, <code>l</code>, <code>m</code> <em>and</em> <code>n</code> when constructing    the delay reconstruction.</li>
-</ul>
-<p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><span class="c"># Prediction lags</span>
-<span class="n">ηs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span>
-<span class="n">binning</span> <span class="o">=</span> <span class="n">RectangularBinning</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">DynamicalSystems</span>
 
-<span class="c"># Use defaults, binning and prediction lags are required. </span>
-<span class="c"># Note that `binning` and `ηs` are *mandatory* keyword arguments.</span>
-<span class="n">TransferOperatorGridTest</span><span class="p">(</span><span class="n">binning</span> <span class="o">=</span> <span class="n">binning</span><span class="p">,</span> <span class="n">ηs</span> <span class="o">=</span> <span class="n">ηs</span><span class="p">)</span>
+<span class="c"># Short time series of two coupled logistic maps (x drives y)</span>
+<span class="n">sys</span> <span class="o">=</span> <span class="n">logistic2_unidir</span><span class="p">(</span><span class="n">c_xy</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">npts</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">columns</span><span class="p">(</span><span class="n">trajectory</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">npts</span><span class="p">,</span> <span class="n">Ttr</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">))</span>
 
-<span class="c"># The other keywords can also be adjusted</span>
-<span class="n">TransferOperatorGridTest</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">binning</span> <span class="o">=</span> <span class="n">binning</span><span class="p">,</span> <span class="n">ηs</span> <span class="o">=</span> <span class="n">ηs</span><span class="p">)</span>
+<span class="c"># average over a few different binning schemes, use a few different</span>
+<span class="c"># prediction lags and use the transfer operator grid estimator on the point</span>
+<span class="c"># cloud generated from the invariant measure over the triangulation.</span>
+<span class="n">binnings</span> <span class="o">=</span> <span class="p">[</span><span class="n">RectangularBinning</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">TransferOperatorGrid</span><span class="p">()</span>
+<span class="n">ηs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">3</span>
+
+<span class="c"># Perform causality test, both from x to y and y to x</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">ExactSimplexIntersectionTest</span><span class="p">(</span><span class="n">binning</span> <span class="o">=</span> <span class="n">binnings</span><span class="p">,</span> <span class="n">estimator</span> <span class="o">=</span> <span class="n">estimator</span><span class="p">,</span> <span class="n">ηs</span> <span class="o">=</span> <span class="n">ηs</span><span class="p">)</span>
+<span class="n">te_xtoy</span> <span class="o">=</span> <span class="n">causality</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+<span class="n">te_ytox</span> <span class="o">=</span> <span class="n">causality</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
 </pre></div>
 
 <p><strong>References</strong></p>
 <ol>
-<li>Diego, David, Kristian Agasøster Haaga, and Bjarte Hannisdal. "Transfer entropy computation   using the Perron-Frobenius operator." Physical Review E 99.4 (2019): 042212.  <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.042212">https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.042212</a></li>
+<li>Diego, David, Kristian Agasøster Haaga, and Bjarte Hannisdal. "Transfer entropy computation  using the Perron-Frobenius operator." Physical Review E 99.4 (2019): 042212.  <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.042212">https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.042212</a></li>
 </ol>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/55e36cc308b66d3472990a06b2797f9f9154ea0a/base/#L0-L148' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/55e36cc308b66d3472990a06b2797f9f9154ea0a/base/#L0-L81' class='documenter-source'>source</a><br></p>
                 
                   
                 
@@ -1355,7 +1291,7 @@ TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}) \log_{2}{\left(\
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ConvergentCrossMappingTest/" title="ConvergentCrossMappingTest" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ApproximateSimplexIntersectionTest/" title="ApproximateSimplexIntersectionTest" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1364,19 +1300,19 @@ TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}) \log_{2}{\left(\
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                ConvergentCrossMappingTest
+                ApproximateSimplexIntersectionTest
               </span>
             </div>
           </a>
         
         
-          <a href="../VisitationFrequencyTest/" title="VisitationFrequencyTest" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../PredictiveAsymmetryTest/" title="Predictive asymmetry test" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                VisitationFrequencyTest
+                Predictive asymmetry test
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
