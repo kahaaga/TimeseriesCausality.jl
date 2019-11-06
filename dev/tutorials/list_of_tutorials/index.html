@@ -349,6 +349,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../causalitytests/causality_from_uncertain_data_InterpolateBinTest/" title="Interpolate-and-bin resampling" class="md-nav__link">
+      Interpolate-and-bin resampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../causalitytests/causality_from_uncertain_data_RandomSequencesTest/" title="Random chunk resampling" class="md-nav__link">
+      Random chunk resampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../causalitytests/causality_from_uncertain_data_strictlyincreasing_interpolated/" title="Strictly increasing and interpolated resampling" class="md-nav__link">
       Strictly increasing and interpolated resampling
     </a>
@@ -1399,7 +1423,7 @@
 </ul>
 <p><a id='tutorials_causality_from_uncertain_data-2'></a></p>
 <h2 id="causality-from-uncertain-data-binning">Causality from uncertain data, binning</h2>
-<p>Many causality tests require data that are equally spaced in time. If your time series have timing uncertainties, they can be brought on a common, regularly spaced time grid  by using a <a href="https://kahaaga.github.io/UncertainData.jl/dev/resampling/resampling_schemes/resampling_with_schemes_uncertain_indexvalue_collections/#binned_resampling_schemes">binned resampling scheme</a>. Then, define an instance of a <a href="../../uncertaindata/BinnedDataCausalityTest/#CausalityTools.CausalityTests.BinnedDataCausalityTest"><code>BinnedDataCausalityTest</code></a> with the desired binning scheme and <a href="../../causalitytests/causality_tests/#causality_tests-1">causality test</a> of your choice, and apply the test over one or more draws of the binned dataset. Below are some examples:</p>
+<p>Many causality tests require data that are equally spaced in time. If your time series have timing uncertainties, they can be brought on a common, regularly spaced time grid  by using a <a href="https://kahaaga.github.io/UncertainData.jl/dev/resampling/resampling_schemes/resampling_with_schemes_uncertain_indexvalue_collections/#binned_resampling_schemes">binned resampling scheme</a>. Then, define an instance of a <a href="../../causalitytests/causality_from_uncertain_data_binneddatacausalitytest/#CausalityTools.CausalityTests.BinnedDataCausalityTest"><code>BinnedDataCausalityTest</code></a> with the desired binning scheme and <a href="../../causalitytests/causality_tests/#causality_tests-1">causality test</a> of your choice, and apply the test over one or more draws of the binned dataset. Below are some examples:</p>
 <ul>
 <li><a href="../causality/binned_uncertain_data/tutorial_BinnedDataCausalityTest_PredictiveAsymmetryTest_BinnedResampling/#tutorial_PredictiveAsymmetryTest_BinnedResampling-1"><code>PredictiveAsymmetryTest</code> with <code>BinnedResampling</code></a> [<a href="https://github.com/kahaaga/CausalityTools.jl/blob/master/tutorials/CausalityTools_tutorial_BinnedDataCausalityTest_PredictiveAsymmetryTest_BinnedResampling.ipynb">notebook</a>]</li>
 <li><a href="../causality/binned_uncertain_data/tutorial_BinnedDataCausalityTest_PredictiveAsymmetryTest_BinnedMeanResampling/#tutorial_PredictiveAsymmetryTest_BinnedMeanResampling-1"><code>PredictiveAsymmetryTest</code> with <code>BinnedMeanResampling</code></a> [<a href="https://github.com/kahaaga/CausalityTools.jl/blob/master/tutorials/CausalityTools_tutorial_BinnedDataCausalityTest_PredictiveAsymmetryTest_BinnedMeanResampling.ipynb">notebook</a>]</li>

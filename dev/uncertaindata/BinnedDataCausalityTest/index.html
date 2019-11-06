@@ -345,6 +345,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../causalitytests/causality_from_uncertain_data_InterpolateBinTest/" title="Interpolate-and-bin resampling" class="md-nav__link">
+      Interpolate-and-bin resampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../causalitytests/causality_from_uncertain_data_RandomSequencesTest/" title="Random chunk resampling" class="md-nav__link">
+      Random chunk resampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../causalitytests/causality_from_uncertain_data_strictlyincreasing_interpolated/" title="Strictly increasing and interpolated resampling" class="md-nav__link">
       Strictly increasing and interpolated resampling
     </a>
@@ -1311,46 +1335,8 @@
                 
                   <h1>BinnedDataCausalityTest</h1>
                 
-                <p><a id='CausalityTools.CausalityTests.BinnedDataCausalityTest' href='#CausalityTools.CausalityTests.BinnedDataCausalityTest'>#</a>
-<strong><code>CausalityTools.CausalityTests.BinnedDataCausalityTest</code></strong> &mdash; <em>Type</em>.</p>
-<div class="highlight"><pre><span></span><span class="n">BinnedDataCausalityTest</span><span class="p">(</span><span class="n">test</span><span class="o">::</span><span class="n">CT</span><span class="p">,</span> <span class="n">binning</span><span class="o">::</span><span class="n">AbstractBinnedUncertainValueResampling</span><span class="p">,</span> <span class="n">n_realizations</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
-<span class="n">BinnedDataCausalityTest</span><span class="p">(</span><span class="n">test</span><span class="o">::</span><span class="n">CT</span><span class="p">,</span> <span class="n">binning</span><span class="o">::</span><span class="n">AbstractBinnedSummarisedResampling</span><span class="p">)</span>
-</pre></div>
-
-<p>A causality test where the data are binned before applying the test. If <code>binning</code> is some  binning scheme that returns an uncertain value for each  bin (e.g. <code>BinnedResampling</code> or <code>BinnedWeightedResampling</code>), then the <code>test</code> is  applied <code>n_realizations</code> times. If <code>binning</code> returns a single value for each bin  (e.g. <code>BinnedMeanResampling</code> or <code>BinnedMeanWeightedResampling</code>, the <code>test</code> is applied only once.</p>
-<p><strong>Fields</strong></p>
-<ul>
-<li><strong><code>test::CausalityTest</code></strong>. An instance of a causality test, e.g. <code>VisitationFrequencyTest</code>,    <code>PredictiveAsymmetryTest</code>, <code>CrossMappingTest</code> or <code>JointDistanceDistributionTest</code>.</li>
-<li><strong><code>binning::AbstractBinnedResampling</code></strong>. An instance of a resampling scheme    indicating the type of binning, e.g <code>BinnedResampling</code>, <code>BinnedWeightedResampling</code>,    <code>BinnedMeanResampling</code> or <code>BinnedMeanWeightedResampling</code>.</li>
-<li><strong><code>n_realizations::Int</code></strong>: The number of independent draws of the binned data set over   which to compute the causality <code>test</code>. Only taken into consideration of <code>binning</code> is    a scheme resulting in each bin being represented by an uncertain value. If bins are    summarized, then the <code>test</code> is always applied only once.</li>
-</ul>
-<p><strong>Examples</strong></p>
-<p><strong>Binned convergent cross mapping test</strong></p>
-<p>Let's say we want to bin the data by drawing n_draws = 5000 realiastions of  each uncertain data point, then assign the draws to the correct bins, and finally get a kernel density estimate to the distribution of values in each bin.</p>
-<div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="mi">0</span><span class="o">:</span><span class="mi">10</span><span class="o">:</span><span class="mi">1000</span> <span class="c"># left bin edges</span>
-<span class="n">n_draw</span> <span class="o">=</span> <span class="mi">5000</span> <span class="c"># sample each point 5000 times and distribute among bins</span>
-<span class="n">binning</span> <span class="o">=</span> <span class="n">BinnedResampling</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
-
-<span class="n">ccm_test</span> <span class="o">=</span> <span class="n">ConvergentCrossMappingTest</span><span class="p">(</span><span class="n">timeseries_lengths</span> <span class="o">=</span> <span class="mi">15</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="mi">100</span> <span class="o">|&gt;</span> <span class="n">collect</span><span class="p">,</span> 
-    <span class="n">n_reps</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">libsize</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">τ</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span>
-
-<span class="n">test</span> <span class="o">=</span> <span class="n">BinnedDataCausalityTest</span><span class="p">(</span><span class="n">ccm_test</span><span class="p">,</span> <span class="n">binning</span><span class="p">,</span> <span class="n">n_realizations</span><span class="p">)</span>
-</pre></div>
-
-<p><strong>Binned transfer entropy test</strong></p>
-<p>Let's say we want to bin the data by drawing n_draws = 7500 realiastions of  each uncertain data point, then assign the draws to the correct bins, and finally get a kernel density estimate to the distribution of values in each bin.</p>
-<div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="mi">0</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="mi">1000</span> <span class="c"># left bin edges</span>
-<span class="n">n_draws</span> <span class="o">=</span> <span class="mi">7500</span>
-<span class="n">binning</span> <span class="o">=</span> <span class="n">BinnedResampling</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">n_draws</span><span class="p">)</span>
-
-<span class="c"># A transfer entropy causality test using the visitation frequency estimator</span>
-<span class="n">state_space_binning</span> <span class="o">=</span> <span class="n">RectangularBinning</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">te_test</span> <span class="o">=</span> <span class="n">VisitationFrequencyTest</span><span class="p">(</span><span class="n">binning</span> <span class="o">=</span> <span class="n">state_space_binning</span><span class="p">,</span> <span class="n">ηs</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">test</span> <span class="o">=</span> <span class="n">BinnedDataCausalityTest</span><span class="p">(</span><span class="n">te_test</span><span class="p">,</span> <span class="n">binning</span><span class="p">,</span> <span class="n">n_realizations</span><span class="p">)</span>
-</pre></div>
-
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/c41fd85c769ae313805d828164c6e06c97694047/src/causalitytests/highlevel_tests/BinnedDataCausalityTest.jl#L10-L71' class='documenter-source'>source</a><br></p>
+                <p>!!! warning "Missing docstring."
+    Missing docstring for <code>BinnedDataCausalityTest</code>. Check Documenter's build log for details.</p>
                 
                   
                 

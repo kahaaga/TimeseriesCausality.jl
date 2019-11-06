@@ -349,6 +349,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../causalitytests/causality_from_uncertain_data_InterpolateBinTest/" title="Interpolate-and-bin resampling" class="md-nav__link">
+      Interpolate-and-bin resampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../causalitytests/causality_from_uncertain_data_RandomSequencesTest/" title="Random chunk resampling" class="md-nav__link">
+      Random chunk resampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../causalitytests/causality_from_uncertain_data_strictlyincreasing_interpolated/" title="Strictly increasing and interpolated resampling" class="md-nav__link">
       Strictly increasing and interpolated resampling
     </a>
@@ -1462,7 +1486,7 @@ TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}) \log_{b}{\left(\
 </script>
 </div>
 <p>using the provided <code>estimator</code> (default = <code>VisitationFrequency</code>) for  each of the discretizations. A vector of the TE estimates for each discretization  is returned.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/c41fd85c769ae313805d828164c6e06c97694047/src/method_wrappers/wrapper_transferentropy_regular.jl#L198-L284' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/1d70b34dfedad45a8a8baf7599bd5cd93339d292/src/method_wrappers/wrapper_transferentropy_regular.jl#L198-L284' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>te_reg(source::AbstractArray{&lt;:Real, 1}, 
     response::AbstractArray{&lt;:Real, 1}, 
     k::Int, l::Int, m::Int,
@@ -1527,7 +1551,7 @@ TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}) \log_{b}{\left(\
 </script>
 </div>
 <p>using the provided <code>estimator</code> (default = <code>VisitationFrequency</code>) for  each of the discretizations. A vector of the TE estimates for each discretization  is returned.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/c41fd85c769ae313805d828164c6e06c97694047/src/method_wrappers/wrapper_transferentropy_regular.jl#L317-L395' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/1d70b34dfedad45a8a8baf7599bd5cd93339d292/src/method_wrappers/wrapper_transferentropy_regular.jl#L317-L395' class='documenter-source'>source</a><br></p>
 <p><a id='wrapper_te_cond-1'></a></p>
 <h2 id="te-estimation-between-two-data-series-conditioned-on-third-series">TE estimation between two data series conditioned on third series</h2>
 <p><a id='CausalityTools.te_cond' href='#CausalityTools.te_cond'>#</a>
@@ -1602,7 +1626,7 @@ TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}, C_{pp}) \log_{b}
 </script>
 </div>
 <p>using the provided <code>estimator</code> (default = <code>VisitationFrequency</code>) for  each of the discretizations. A vector of the TE estimates for each discretization  is returned.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/c41fd85c769ae313805d828164c6e06c97694047/src/method_wrappers/wrapper_transferentropy_cond.jl#L2-L95' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/1d70b34dfedad45a8a8baf7599bd5cd93339d292/src/method_wrappers/wrapper_transferentropy_cond.jl#L2-L95' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>te_cond(source::AbstractArray{&lt;:Real, 1}, 
     response::AbstractArray{&lt;:Real, 1},
     cond::AbstractArray{&lt;:Real, 1},
@@ -1672,7 +1696,7 @@ TE_{S \rightarrow T} = \int_{\mathbb{E}} P(T_f, T_{pp}, S_{pp}, C_{pp}) \log_{b}
 </script>
 </div>
 <p>using the provided <code>estimator</code> (default = <code>VisitationFrequency</code>) for  each of the discretizations. A vector of the TE estimates for each discretization  is returned.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/c41fd85c769ae313805d828164c6e06c97694047/src/method_wrappers/wrapper_transferentropy_cond.jl#L128-L213' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/1d70b34dfedad45a8a8baf7599bd5cd93339d292/src/method_wrappers/wrapper_transferentropy_cond.jl#L128-L213' class='documenter-source'>source</a><br></p>
                 
                   
                 
