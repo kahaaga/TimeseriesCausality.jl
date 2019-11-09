@@ -1554,7 +1554,7 @@
 <span class="n">causality</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">setup</span><span class="p">,</span> <span class="n">test_pa</span><span class="p">)</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/f3f7ede979ba093e7c4354cbda78fccd1b19da63/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L83-L130' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/5c6527775073e93102872ab2128a7ff3a9638db1/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L83-L130' class='documenter-source'>source</a><br></p>
 <p><a id='Discrete-systems-1'></a></p>
 <h3 id="discrete-systems">Discrete systems</h3>
 <p><a id='CausalityToolsBase.causality-Tuple{DiscreteDynamicalSystem,DiscreteSystemSetup{NoResampling},CausalityTest}' href='#CausalityToolsBase.causality-Tuple{DiscreteDynamicalSystem,DiscreteSystemSetup{NoResampling},CausalityTest}'>#</a>
@@ -1594,7 +1594,7 @@
 <span class="n">causality</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">setup</span><span class="p">,</span> <span class="n">test_jddt</span><span class="p">)</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/f3f7ede979ba093e7c4354cbda78fccd1b19da63/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L30-L68' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/5c6527775073e93102872ab2128a7ff3a9638db1/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L30-L68' class='documenter-source'>source</a><br></p>
 <p><a id='Setting-up-the-analysis-1'></a></p>
 <h2 id="setting-up-the-analysis">Setting up the analysis</h2>
 <p>The setup for continuous and discrete systems is slightly different, so there are two separate  types where you can give instructions about step length, time series length, etc, to the solvers.</p>
@@ -1629,7 +1629,6 @@
 <p><a id='CausalityTools.IntegrationDynamicalSystems.DiscreteSystemSetup' href='#CausalityTools.IntegrationDynamicalSystems.DiscreteSystemSetup'>#</a>
 <strong><code>CausalityTools.IntegrationDynamicalSystems.DiscreteSystemSetup</code></strong> &mdash; <em>Type</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">DiscreteSystemSetup</span><span class="p">(</span><span class="n">resampling</span> <span class="o">=</span> <span class="n">NoResampling</span><span class="p">,</span> <span class="n">dt</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Ttr</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> 
-    <span class="n">diffeq</span> <span class="o">=</span> <span class="p">(</span><span class="n">alg</span> <span class="o">=</span> <span class="n">SimpleDiffEq</span><span class="o">.</span><span class="n">SimpleATsit5</span><span class="p">(),</span> <span class="n">abstol</span> <span class="o">=</span> <span class="mf">1.0e-6</span><span class="p">,</span> <span class="n">reltol</span> <span class="o">=</span> <span class="mf">1.0e-6</span><span class="p">),</span>
     <span class="n">n_pts</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 </pre></div>
 
@@ -1647,7 +1646,7 @@
 <li><strong><code>diffeq</code></strong>: Arguments propagated to init DifferentialEquations.jl. Defaults to   <code>diffeq = (alg = SimpleDiffEq.SimpleATsit5(), abstol = 1.0e-6, reltol = 1.0e-6)</code>.</li>
 <li><strong><code>n_pts::Int</code></strong>: The number of points in the orbit.</li>
 </ul>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/55e36cc308b66d3472990a06b2797f9f9154ea0a/base/#L0-L26' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/55e36cc308b66d3472990a06b2797f9f9154ea0a/base/#L0-L25' class='documenter-source'>source</a><br></p>
                 
                   
                 
