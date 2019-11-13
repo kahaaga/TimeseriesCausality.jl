@@ -1391,10 +1391,11 @@
 <h2 id="distance-based-causality-tests">Distance-based causality tests</h2>
 <p><a id='CausalityTools.CausalityTests.DistanceBasedCausalityTest' href='#CausalityTools.CausalityTests.DistanceBasedCausalityTest'>#</a>
 <strong><code>CausalityTools.CausalityTests.DistanceBasedCausalityTest</code></strong> &mdash; <em>Type</em>.</p>
-<div class="highlight"><pre><span></span><span class="n">DistanceBasedCausalityTest</span>
+<div class="highlight"><pre><span></span><span class="n">DistanceBasedCausalityTest</span><span class="p">{</span><span class="n">N</span><span class="p">}</span>
 </pre></div>
 
-<p>The supertype of all abstract and composite types representing a causality  test based on some sort of distance computation.</p>
+<p>The supertype of all abstract and composite types representing a causality  test based on some sort of distance computation. </p>
+<p>The type parameter <code>N</code> indicates the number of returned elements when  applying the test.</p>
 <p>Concrete subtypes are </p>
 <ul>
 <li><a href="../CrossMappingTest/#CausalityTools.CausalityTests.CrossMappingTest"><code>CrossMappingTest</code></a></li>
@@ -1403,7 +1404,7 @@
 <li><a href="../JointDistanceDistributionTest/#CausalityTools.CausalityTests.JointDistanceDistributionTTest"><code>JointDistanceDistributionTTest</code></a></li>
 <li><a href="../SMeasureTest/#CausalityTools.CausalityTests.SMeasureTest"><code>SMeasureTest</code></a></li>
 </ul>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/dc006a03169b226ff89abdb096b80b0294d3b598/src/causalitytests/tests_distance_based/DistanceBasedCausalityTest.jl#L2-L16' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/7b4f380d24341c02234b42eb83908667066e0179/src/causalitytests/tests_distance_based/DistanceBasedCausalityTest.jl#L2-L19' class='documenter-source'>source</a><br></p>
 <p><a id='Entropy-based-tests-1'></a></p>
 <h2 id="entropy-based-tests">Entropy-based tests</h2>
 <p><a id='CausalityTools.CausalityTests.EntropyBasedCausalityTest' href='#CausalityTools.CausalityTests.EntropyBasedCausalityTest'>#</a>
@@ -1423,15 +1424,15 @@
 <ul>
 <li><a href="../PredictiveAsymmetryTest/#CausalityTools.CausalityTests.PredictiveAsymmetryTest"><code>PredictiveAsymmetryTest</code></a></li>
 </ul>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/dc006a03169b226ff89abdb096b80b0294d3b598/src/causalitytests/tests_entropy_based/EntropyBasedCausalityTest.jl#L2-L19' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/7b4f380d24341c02234b42eb83908667066e0179/src/causalitytests/tests_entropy_based/EntropyBasedCausalityTest.jl#L2-L19' class='documenter-source'>source</a><br></p>
 <p><a id='Transfer-entropy-tests-1'></a></p>
 <h3 id="transfer-entropy-tests">Transfer entropy tests</h3>
 <p><a id='CausalityTools.CausalityTests.TransferEntropyCausalityTest' href='#CausalityTools.CausalityTests.TransferEntropyCausalityTest'>#</a>
 <strong><code>CausalityTools.CausalityTests.TransferEntropyCausalityTest</code></strong> &mdash; <em>Type</em>.</p>
-<div class="highlight"><pre><span></span><span class="n">TransferEntropyCausalityTest</span>
+<div class="highlight"><pre><span></span><span class="n">TransferEntropyCausalityTest</span><span class="p">{</span><span class="n">N</span><span class="p">}</span>
 </pre></div>
 
-<p>The supertype of all abstract and composite types representing a transfer  entropy causality test.</p>
+<p>The supertype of all abstract and composite types representing a transfer  entropy causality test applied to <code>N</code> different prediction lags.</p>
 <p>Concrete subtypes are </p>
 <ul>
 <li><a href="../TransferOperatorGridTest/#CausalityTools.CausalityTests.TransferOperatorGridTest"><code>TransferOperatorGridTest</code></a></li>
@@ -1439,7 +1440,7 @@
 <li><a href="../ApproximateSimplexIntersectionTest/#CausalityTools.CausalityTests.ApproximateSimplexIntersectionTest"><code>ApproximateSimplexIntersectionTest</code></a></li>
 <li><a href="../ExactSimplexIntersectionTest/#CausalityTools.CausalityTests.ExactSimplexIntersectionTest"><code>ExactSimplexIntersectionTest</code></a></li>
 </ul>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/dc006a03169b226ff89abdb096b80b0294d3b598/src/causalitytests/tests_entropy_based/TransferEntropyCausalityTest.jl#L2-L14' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/7b4f380d24341c02234b42eb83908667066e0179/src/causalitytests/tests_entropy_based/TransferEntropyCausalityTest.jl#L2-L14' class='documenter-source'>source</a><br></p>
                 
                   
                 
