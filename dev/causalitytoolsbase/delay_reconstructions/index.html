@@ -611,8 +611,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
-    Documentation
+  <a href="#delay-reconstruction" title="Delay reconstruction" class="md-nav__link">
+    Delay reconstruction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-mapping" title="Variable mapping" class="md-nav__link">
+    Variable mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconstruction-lag-mapping" title="Reconstruction lag mapping" class="md-nav__link">
+    Reconstruction lag mapping
   </a>
   
 </li>
@@ -1302,8 +1316,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
-    Documentation
+  <a href="#delay-reconstruction" title="Delay reconstruction" class="md-nav__link">
+    Delay reconstruction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-mapping" title="Variable mapping" class="md-nav__link">
+    Variable mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconstruction-lag-mapping" title="Reconstruction lag mapping" class="md-nav__link">
+    Reconstruction lag mapping
   </a>
   
 </li>
@@ -1330,8 +1358,8 @@
                 <p><a id='custom_delay_reconstruction-1'></a></p>
 <h1 id="custom-delay-reconstruction">Custom delay reconstruction</h1>
 <p>To create delay embeddings from sequential data, use <code>customembed</code>. This function returns allows for more flexibility than <code>embed</code> in DynamicalSystems.jl<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, but also returns a <code>Dataset</code>, so these embedding methods may be used interchangeably.</p>
-<p><a id='Documentation-1'></a></p>
-<h2 id="documentation">Documentation</h2>
+<p><a id='Delay-reconstruction-1'></a></p>
+<h2 id="delay-reconstruction">Delay reconstruction</h2>
 <p><a id='CausalityToolsBase.customembed' href='#CausalityToolsBase.customembed'>#</a>
 <strong><code>CausalityToolsBase.customembed</code></strong> &mdash; <em>Function</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">customembed</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">positions</span><span class="o">::</span><span class="n">Positions</span><span class="p">,</span> <span class="n">lags</span><span class="o">::</span><span class="n">Lags</span><span class="p">)</span>
@@ -1374,6 +1402,8 @@ TE_{x \to y} =  \int_E P(x_t, y_{t-\tau} y_t, y_{t + \eta}) \log{\left( \dfrac{P
 <span class="n">CustomReconstruction</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">Positions</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Lags</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">embedlag</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 
+<p><a id='Variable-mapping-1'></a></p>
+<h2 id="variable-mapping">Variable mapping</h2>
 <p><a id='CausalityToolsBase.Positions' href='#CausalityToolsBase.Positions'>#</a>
 <strong><code>CausalityToolsBase.Positions</code></strong> &mdash; <em>Type</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">Positions</span>
@@ -1385,6 +1415,8 @@ TE_{x \to y} =  \int_E P(x_t, y_{t-\tau} y_t, y_{t + \eta}) \log{\left( \dfrac{P
 <li><code>Positions(1, 2, 1, 5)</code> indicates a 4-dimensional state space reconstruction where the 1<sup>st</sup>    coordinate axis of the reconstruction should be formed from the first variable/column of    the input data, the 2<sup>nd</sup> coordinate axis of the reconstruction should be formed from the    2<sup>nd</sup> variable/column of the input data, the 3<sup>rd</sup> coordinate axis of the reconstruction should    be formed from the 1<sup>st</sup> variable/column of the input data, the 4<sup>th</sup> coordinate axis of the    reconstruction should be formed from the 5<sup>th</sup> variable/column of the input data.</li>
 <li><code>Positions(-1, 2)</code> indicates a 2-dimensional reconstruction, but will not work, because    each position must refer to the index of a dynamical variable (column) of a dataset    (indexed from 1 and up, so negative values will not work).</li>
 </ul>
+<p><a id='Reconstruction-lag-mapping-1'></a></p>
+<h2 id="reconstruction-lag-mapping">Reconstruction lag mapping</h2>
 <p><a id='CausalityToolsBase.Lags' href='#CausalityToolsBase.Lags'>#</a>
 <strong><code>CausalityToolsBase.Lags</code></strong> &mdash; <em>Type</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">Lags</span>

@@ -606,16 +606,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generating-grid-points-from-a-rectangular-binning" title="Generating grid points from a rectangular binning" class="md-nav__link">
-    Generating grid points from a rectangular binning
+  <a href="#generating-grid-points-from-rectangular-binnings" title="Generating grid points from rectangular binnings" class="md-nav__link">
+    Generating grid points from rectangular binnings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties-of-a-rectangular-binning" title="Properties of a rectangular binning" class="md-nav__link">
-    Properties of a rectangular binning
+  <a href="#properties-of-rectangular-binnings" title="Properties of rectangular binnings" class="md-nav__link">
+    Properties of rectangular binnings
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimamaxima" title="Minima/maxima" class="md-nav__link">
+    Minima/maxima
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-lengths" title="Edge lengths" class="md-nav__link">
+    Edge lengths
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1330,16 +1350,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generating-grid-points-from-a-rectangular-binning" title="Generating grid points from a rectangular binning" class="md-nav__link">
-    Generating grid points from a rectangular binning
+  <a href="#generating-grid-points-from-rectangular-binnings" title="Generating grid points from rectangular binnings" class="md-nav__link">
+    Generating grid points from rectangular binnings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties-of-a-rectangular-binning" title="Properties of a rectangular binning" class="md-nav__link">
-    Properties of a rectangular binning
+  <a href="#properties-of-rectangular-binnings" title="Properties of rectangular binnings" class="md-nav__link">
+    Properties of rectangular binnings
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimamaxima" title="Minima/maxima" class="md-nav__link">
+    Minima/maxima
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-lengths" title="Edge lengths" class="md-nav__link">
+    Edge lengths
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1415,8 +1455,8 @@
 <ul>
 <li><code>RectangularBinning(-5:5, 2:2, n_intervals = 5)</code>: split the ranges <code>-5:5</code> and <code>2:2</code> into    <code>n_intervals</code> equal-length intervals.</li>
 </ul>
-<p><a id='Generating-grid-points-from-a-rectangular-binning-1'></a></p>
-<h2 id="generating-grid-points-from-a-rectangular-binning">Generating grid points from a rectangular binning</h2>
+<p><a id='Generating-grid-points-from-rectangular-binnings-1'></a></p>
+<h2 id="generating-grid-points-from-rectangular-binnings">Generating grid points from rectangular binnings</h2>
 <p><a id='CausalityToolsBase.generate_gridpoints' href='#CausalityToolsBase.generate_gridpoints'>#</a>
 <strong><code>CausalityToolsBase.generate_gridpoints</code></strong> &mdash; <em>Function</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">generate_gridpoints</span><span class="p">(</span><span class="n">axisminima</span><span class="p">,</span> <span class="n">stepsizes</span><span class="p">,</span> <span class="n">n_intervals_eachaxis</span><span class="p">,</span> 
@@ -1457,8 +1497,10 @@
 </pre></div>
 
 <p>will do the same, but adds another interval (11 in total), shifts the  entire hypercube so that the minima and maxima along each axis lie  half a bin outside the original extrema, then returns the centers of  the grid cells.</p>
-<p><a id='Properties-of-a-rectangular-binning-1'></a></p>
-<h2 id="properties-of-a-rectangular-binning">Properties of a rectangular binning</h2>
+<p><a id='Properties-of-rectangular-binnings-1'></a></p>
+<h2 id="properties-of-rectangular-binnings">Properties of rectangular binnings</h2>
+<p><a id='Minima/maxima-1'></a></p>
+<h3 id="minimamaxima">Minima/maxima</h3>
 <p><a id='CausalityToolsBase.get_minmaxes' href='#CausalityToolsBase.get_minmaxes'>#</a>
 <strong><code>CausalityToolsBase.get_minmaxes</code></strong> &mdash; <em>Function</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">get_minmaxes</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Tuple</span><span class="p">{</span><span class="kt">Vector</span><span class="p">{</span><span class="n">Float</span><span class="p">},</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">Float</span><span class="p">}}</span>
@@ -1477,6 +1519,8 @@
 </pre></div>
 
 <p>Return the maxima along each axis of the dataset <code>pts</code>.</p>
+<p><a id='Edge-lengths-1'></a></p>
+<h3 id="edge-lengths">Edge lengths</h3>
 <p><a id='CausalityToolsBase.get_edgelengths' href='#CausalityToolsBase.get_edgelengths'>#</a>
 <strong><code>CausalityToolsBase.get_edgelengths</code></strong> &mdash; <em>Function</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">get_edgelengths</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">binning_scheme</span><span class="o">::</span><span class="n">RectangularBinning</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">Float</span><span class="p">}</span>
