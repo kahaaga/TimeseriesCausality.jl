@@ -1482,7 +1482,7 @@
 <span class="n">causality</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">setup</span><span class="p">,</span> <span class="n">test_pa</span><span class="p">)</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/dcf44bf5c6496e3d6a8ca7aec023c62ebbc87a77/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L83-L130' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/a8d309a82a75b3a66bfdd7b6492ec28c67fa43c2/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L83-L130' class='documenter-source'>source</a><br></p>
 <p><a id='Discrete-systems-1'></a></p>
 <h3 id="discrete-systems">Discrete systems</h3>
 <p><a id='CausalityToolsBase.causality-Tuple{DiscreteDynamicalSystem,DiscreteSystemSetup{NoResampling},CausalityTest}' href='#CausalityToolsBase.causality-Tuple{DiscreteDynamicalSystem,DiscreteSystemSetup{NoResampling},CausalityTest}'>#</a>
@@ -1522,7 +1522,7 @@
 <span class="n">causality</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">setup</span><span class="p">,</span> <span class="n">test_jddt</span><span class="p">)</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/dcf44bf5c6496e3d6a8ca7aec023c62ebbc87a77/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L30-L68' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/a8d309a82a75b3a66bfdd7b6492ec28c67fa43c2/src/integration_dynamicalsystems/IntegrationDynamicalSystems.jl#L30-L68' class='documenter-source'>source</a><br></p>
 <p><a id='Setting-up-the-analysis-1'></a></p>
 <h2 id="setting-up-the-analysis">Setting up the analysis</h2>
 <p>The setup for continuous and discrete systems is slightly different, so there are two separate  types where you can give instructions about step length, time series length, etc, to the solvers.</p>
@@ -1571,10 +1571,9 @@
 <li><strong><code>resampling</code></strong>: An instance of a resampling scheme. Defaults to <code>NoResampling()</code>.</li>
 <li><strong><code>dt::Int</code></strong>: The time step when iterating the system.</li>
 <li><strong><code>Ttr::Int</code></strong>: The number of transient iterations before starting sampling.</li>
-<li><strong><code>diffeq</code></strong>: Arguments propagated to init DifferentialEquations.jl. Defaults to   <code>diffeq = (alg = SimpleDiffEq.SimpleATsit5(), abstol = 1.0e-6, reltol = 1.0e-6)</code>.</li>
 <li><strong><code>n_pts::Int</code></strong>: The number of points in the orbit.</li>
 </ul>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/55e36cc308b66d3472990a06b2797f9f9154ea0a/base/#L0-L25' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/55e36cc308b66d3472990a06b2797f9f9154ea0a/base/#L0-L22' class='documenter-source'>source</a><br></p>
                 
                   
                 
