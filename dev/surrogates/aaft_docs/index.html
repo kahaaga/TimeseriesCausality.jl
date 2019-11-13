@@ -1365,17 +1365,17 @@
 </pre></div>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/a8d309a82a75b3a66bfdd7b6492ec28c67fa43c2/src/surrogates/surrogates.jl#L80-L86' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4f2e9dc4f074fa7c9e59aa37e388179bf1a05a5c/src/surrogates/surrogates.jl#L80-L86' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>aaft(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </pre></div>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/a8d309a82a75b3a66bfdd7b6492ec28c67fa43c2/src/surrogates/surrogates.jl#L192-L197' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4f2e9dc4f074fa7c9e59aa37e388179bf1a05a5c/src/surrogates/surrogates.jl#L192-L197' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>aaft(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </pre></div>
 
 <p>Column-wise amplitude-adjusted Fourier transform (AAFT) surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/a8d309a82a75b3a66bfdd7b6492ec28c67fa43c2/src/surrogates/surrogates.jl#L304-L309' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4f2e9dc4f074fa7c9e59aa37e388179bf1a05a5c/src/surrogates/surrogates.jl#L304-L309' class='documenter-source'>source</a><br></p>
 <p><a id='Example-1'></a></p>
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><span></span><span class="n">npts</span> <span class="o">=</span> <span class="mi">200</span>
