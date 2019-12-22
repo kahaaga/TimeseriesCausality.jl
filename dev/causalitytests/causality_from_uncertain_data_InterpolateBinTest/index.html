@@ -40,7 +40,7 @@
     
     
       
-        <title>Interpolate-and-bin resampling - CausalityTools.jl</title>
+        <title>InterpolateBinTest - CausalityTools.jl</title>
       
     
     
@@ -122,7 +122,7 @@
                 CausalityTools.jl
               </span>
               <span class="md-header-nav__topic">
-                Interpolate-and-bin resampling
+                InterpolateBinTest
               </span>
             
           
@@ -249,12 +249,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Causality estimation
@@ -272,8 +270,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../causality_from_time_series/" title="Causality from time series" class="md-nav__link">
-      Causality from time series
+    <a href="../causality_from_time_series/" title="From time series" class="md-nav__link">
+      From time series
     </a>
   </li>
 
@@ -282,19 +280,17 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
     
     <label class="md-nav__link" for="nav-2-2">
-      Causality from uncertain data
+      From uncertain time series
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-2-2">
-        Causality from uncertain data
+        From uncertain time series
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -311,116 +307,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data_naive/" title="Naive resampling" class="md-nav__link">
-      Naive resampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data_naive_constrained/" title="Constrained resampling" class="md-nav__link">
-      Constrained resampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data_binneddatacausalitytest/" title="Binned resampling" class="md-nav__link">
-      Binned resampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Interpolate-and-bin resampling
-      </label>
-    
-    <a href="./" title="Interpolate-and-bin resampling" class="md-nav__link md-nav__link--active">
-      Interpolate-and-bin resampling
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#interpolatebintest" title="InterpolateBinTest" class="md-nav__link">
-    InterpolateBinTest
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data_RandomSequencesTest/" title="Random chunk resampling" class="md-nav__link">
-      Random chunk resampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data_strictlyincreasing_interpolated/" title="Strictly increasing and interpolated resampling" class="md-nav__link">
-      Strictly increasing and interpolated resampling
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -432,8 +318,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../causality_from_dynamical_systems/" title="Causality from dynamical systems" class="md-nav__link">
-      Causality from dynamical systems
+    <a href="../causality_from_dynamical_systems/" title="From dynamical systems" class="md-nav__link">
+      From dynamical systems
     </a>
   </li>
 
@@ -591,16 +477,159 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Fundamentals
+      Uncertainty handling and subsampling
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Uncertainty handling and subsampling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_uncertain_data_naive/" title="Naive resampling" class="md-nav__link">
+      Naive resampling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_uncertain_data_naive_constrained/" title="ConstrainedTest" class="md-nav__link">
+      ConstrainedTest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_uncertain_data_binneddatacausalitytest/" title="BinnedDataCausalityTest" class="md-nav__link">
+      BinnedDataCausalityTest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        InterpolateBinTest
+      </label>
+    
+    <a href="./" title="InterpolateBinTest" class="md-nav__link md-nav__link--active">
+      InterpolateBinTest
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interpolatebintest" title="InterpolateBinTest" class="md-nav__link">
+    InterpolateBinTest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-signature" title="Call signature" class="md-nav__link">
+    Call signature
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_uncertain_data_RandomSequencesTest/" title="RandomSequencesTest" class="md-nav__link">
+      RandomSequencesTest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_uncertain_data_strictlyincreasing_interpolated/" title="Strictly increasing and interpolated resampling" class="md-nav__link">
+      Strictly increasing and interpolated resampling
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Fundamentals
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         Fundamentals
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -637,13 +666,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-4-3">
+    <label class="md-nav__link" for="nav-5-3">
       Invariant properties over partitions
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
+      <label class="md-nav__title" for="nav-5-3">
         Invariant properties over partitions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -690,13 +719,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Estimators and algorithms
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Estimators and algorithms
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -709,13 +738,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
     
-    <label class="md-nav__link" for="nav-5-1">
+    <label class="md-nav__link" for="nav-6-1">
       Transfer entropy
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-1">
+      <label class="md-nav__title" for="nav-6-1">
         Transfer entropy
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -781,13 +810,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
-    <label class="md-nav__link" for="nav-5-2">
+    <label class="md-nav__link" for="nav-6-2">
       CCM
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-2">
+      <label class="md-nav__title" for="nav-6-2">
         CCM
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -870,13 +899,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       Example systems
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         Example systems
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -942,13 +971,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Surrogate data
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Surrogate data
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -973,13 +1002,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
     
-    <label class="md-nav__link" for="nav-7-2">
+    <label class="md-nav__link" for="nav-8-2">
       Methods
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-2">
+      <label class="md-nav__title" for="nav-8-2">
         Methods
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1062,42 +1091,6 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      Uncertain data handling
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Uncertain data handling
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../uncertaindata/BinnedDataCausalityTest/" title="BinnedDataCausalityTest" class="md-nav__link">
-      BinnedDataCausalityTest
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
@@ -1147,7 +1140,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tutorials/tutorial_SMeasureTest/" title="SMeasureTest" class="md-nav__link">
+    <a href="../../tutorials/causality/tutorial_SMeasureTest/" title="SMeasureTest" class="md-nav__link">
       SMeasureTest
     </a>
   </li>
@@ -1182,19 +1175,12 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-1" type="checkbox" id="nav-9-3-1">
-    
-    <label class="md-nav__link" for="nav-9-3-1">
-      PredictiveAsymmetryTest
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-3-1">
-        PredictiveAsymmetryTest
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
+  <li class="md-nav__item">
+    <a href="../../tutorials/causality/Tutorial_BinnedResampling_RandomSequencesTest_PredictiveAsymmetryTest_ar1_unidir/" title="BinnedResampling + RandomSequencesTest" class="md-nav__link">
+      BinnedResampling + RandomSequencesTest
+    </a>
+  </li>
+
         
           
           
@@ -1217,11 +1203,6 @@
     <a href="../../tutorials/causality/binned_uncertain_data/tutorial_BinnedDataCausalityTest_PredictiveAsymmetryTest_BinnedMeanResampling/" title="BinnedMeanResampling" class="md-nav__link">
       BinnedMeanResampling
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1310,6 +1291,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#call-signature" title="Call signature" class="md-nav__link">
+    Call signature
+  </a>
+  
+</li>
+      
       
       
       
@@ -1331,6 +1319,40 @@
                 
                 <p><a id='causality_uncertain_interpolateandbin_resampling-1'></a></p>
 <h1 id="interpolate-and-bin-resampling">Interpolate-and-bin resampling</h1>
+<p><a id='InterpolateBinTest-1'></a></p>
+<h2 id="interpolatebintest">InterpolateBinTest</h2>
+<p><a id='CausalityTools.CausalityTests.InterpolateBinTest' href='#CausalityTools.CausalityTests.InterpolateBinTest'>#</a>
+<strong><code>CausalityTools.CausalityTests.InterpolateBinTest</code></strong> &mdash; <em>Type</em>.</p>
+<div class="highlight"><pre><span></span><span class="n">InterpolateBinTest</span><span class="p">(</span><span class="n">test</span><span class="o">::</span><span class="n">CausalityTest</span><span class="p">,</span> <span class="n">interpolate_bin_resampling</span><span class="o">::</span><span class="n">InterpolateAndBin</span><span class="p">)</span>
+<span class="n">InterpolateBinTest</span><span class="p">(</span><span class="n">test</span><span class="o">::</span><span class="n">CausalityTest</span><span class="p">,</span> <span class="n">interpolate_bin_resampling</span><span class="o">::</span><span class="n">InterpolateAndBin</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
+</pre></div>
+
+<p>A causality test where the data is interpolated and then binned before the test is applied.</p>
+<p><code>n</code> controls the number of independent resamplings over which the test  is performed (if not provided, <code>n</code> is set to <code>1</code> by default).</p>
+<p><strong>Examples</strong></p>
+<p>Record <code>N</code> points from the built-in <code>ar1_unidir</code> system, collect the 1<sup>st</sup> and 2<sup>nd</sup> variables as <code>X</code> and <code>Y</code> and add some uncertainties to both the indices and the values.</p>
+<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">sys</span> <span class="o">=</span> <span class="n">ar1_unidir</span><span class="p">(</span><span class="n">c_xy</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">example_uncertain_indexvalue_datasets</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="n">d_xval</span> <span class="o">=</span> <span class="n">Uniform</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span> <span class="n">d_yval</span> <span class="o">=</span> <span class="n">Uniform</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">));</span>
+</pre></div>
+
+<p>Say we want to interpolate both <code>X</code> and <code>Y</code> to some very fine grid  using linear interpolation, then bin to a coarser grid and summarise each bin using the mean of the values in each bin.</p>
+<div class="highlight"><pre><span></span><span class="c"># Define interpolation grid over the range of available index values</span>
+<span class="n">tmin</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">minimum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">indices</span><span class="p">)),</span> <span class="n">minimum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">indices</span><span class="p">)))</span>
+<span class="n">tmax</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">maximum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">indices</span><span class="p">)),</span> <span class="n">maximum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">indices</span><span class="p">)))</span>
+<span class="n">intp_grid</span> <span class="o">=</span> <span class="n">tmin</span><span class="o">:</span><span class="mf">0.01</span><span class="o">:</span><span class="n">tmax</span>
+
+<span class="c"># Define binning grid</span>
+<span class="n">left_bin_edges</span> <span class="o">=</span> <span class="n">tmin</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="n">tmax</span>
+
+<span class="c"># Define the InterpolateAndBin instance</span>
+<span class="n">intp_bin</span> <span class="o">=</span> <span class="n">InterpolateAndBin</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">left_bin_edges</span><span class="p">,</span> <span class="n">Linear</span><span class="p">(),</span> <span class="n">intp_grid</span><span class="p">,</span> <span class="n">Flat</span><span class="p">(</span><span class="n">OnGrid</span><span class="p">()))</span>
+</pre></div>
+
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/482864841f97dff00fa2c8c2d3933b08c7c9a134/src/causalitytests/highlevel_tests/InterpolateBinTest.jl#L3-L40' class='documenter-source'>source</a><br></p>
+<p><a id='Call-signature-1'></a></p>
+<h2 id="call-signature">Call signature</h2>
 <p><a id='CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,InterpolateBinTest}' href='#CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,InterpolateBinTest}'>#</a>
 <strong><code>CausalityToolsBase.causality</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">causality</span><span class="p">(</span><span class="n">source</span><span class="o">::</span><span class="n">AbstractUncertainIndexValueDataset</span><span class="p">,</span> 
@@ -1373,39 +1395,7 @@ intp_bin = InterpolateAndBin(mean, left_bin_edges, Linear(), intp_grid, Flat(OnG
 ib_test = InterpolateBinTest(pa_test, intp_bin, 2)
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4f2e9dc4f074fa7c9e59aa37e388179bf1a05a5c/src/causalitytests/highlevel_tests/causality_InterpolateBinTest.jl#L11-L60' class='documenter-source'>source</a><br></p>
-<p><a id='InterpolateBinTest-1'></a></p>
-<h2 id="interpolatebintest">InterpolateBinTest</h2>
-<p><a id='CausalityTools.CausalityTests.InterpolateBinTest' href='#CausalityTools.CausalityTests.InterpolateBinTest'>#</a>
-<strong><code>CausalityTools.CausalityTests.InterpolateBinTest</code></strong> &mdash; <em>Type</em>.</p>
-<div class="highlight"><pre><span></span><span class="n">InterpolateBinTest</span><span class="p">(</span><span class="n">test</span><span class="o">::</span><span class="n">CausalityTest</span><span class="p">,</span> <span class="n">interpolate_bin_resampling</span><span class="o">::</span><span class="n">InterpolateAndBin</span><span class="p">)</span>
-<span class="n">InterpolateBinTest</span><span class="p">(</span><span class="n">test</span><span class="o">::</span><span class="n">CausalityTest</span><span class="p">,</span> <span class="n">interpolate_bin_resampling</span><span class="o">::</span><span class="n">InterpolateAndBin</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">)</span>
-</pre></div>
-
-<p>A causality test where the data is interpolated and then binned before the test is applied.</p>
-<p><code>n</code> controls the number of independent resamplings over which the test  is performed (if not provided, <code>n</code> is set to <code>1</code> by default).</p>
-<p><strong>Examples</strong></p>
-<p>Record <code>N</code> points from the built-in <code>ar1_unidir</code> system, collect the 1<sup>st</sup> and 2<sup>nd</sup> variables as <code>X</code> and <code>Y</code> and add some uncertainties to both the indices and the values.</p>
-<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
-<span class="n">sys</span> <span class="o">=</span> <span class="n">ar1_unidir</span><span class="p">(</span><span class="n">c_xy</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">example_uncertain_indexvalue_datasets</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-    <span class="n">d_xval</span> <span class="o">=</span> <span class="n">Uniform</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span> <span class="n">d_yval</span> <span class="o">=</span> <span class="n">Uniform</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">));</span>
-</pre></div>
-
-<p>Say we want to interpolate both <code>X</code> and <code>Y</code> to some very fine grid  using linear interpolation, then bin to a coarser grid and summarise each bin using the mean of the values in each bin.</p>
-<div class="highlight"><pre><span></span><span class="c"># Define interpolation grid over the range of available index values</span>
-<span class="n">tmin</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">minimum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">indices</span><span class="p">)),</span> <span class="n">minimum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">indices</span><span class="p">)))</span>
-<span class="n">tmax</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">maximum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">indices</span><span class="p">)),</span> <span class="n">maximum</span><span class="p">(</span><span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">indices</span><span class="p">)))</span>
-<span class="n">intp_grid</span> <span class="o">=</span> <span class="n">tmin</span><span class="o">:</span><span class="mf">0.01</span><span class="o">:</span><span class="n">tmax</span>
-
-<span class="c"># Define binning grid</span>
-<span class="n">left_bin_edges</span> <span class="o">=</span> <span class="n">tmin</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="n">tmax</span>
-
-<span class="c"># Define the InterpolateAndBin instance</span>
-<span class="n">intp_bin</span> <span class="o">=</span> <span class="n">InterpolateAndBin</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">left_bin_edges</span><span class="p">,</span> <span class="n">Linear</span><span class="p">(),</span> <span class="n">intp_grid</span><span class="p">,</span> <span class="n">Flat</span><span class="p">(</span><span class="n">OnGrid</span><span class="p">()))</span>
-</pre></div>
-
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/4f2e9dc4f074fa7c9e59aa37e388179bf1a05a5c/src/causalitytests/highlevel_tests/InterpolateBinTest.jl#L3-L40' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/482864841f97dff00fa2c8c2d3933b08c7c9a134/src/causalitytests/highlevel_tests/causality_InterpolateBinTest.jl#L11-L60' class='documenter-source'>source</a><br></p>
                 
                   
                 
@@ -1426,7 +1416,7 @@ ib_test = InterpolateBinTest(pa_test, intp_bin, 2)
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../causality_from_uncertain_data_binneddatacausalitytest/" title="Binned resampling" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../causality_from_uncertain_data_binneddatacausalitytest/" title="BinnedDataCausalityTest" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1435,19 +1425,19 @@ ib_test = InterpolateBinTest(pa_test, intp_bin, 2)
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Binned resampling
+                BinnedDataCausalityTest
               </span>
             </div>
           </a>
         
         
-          <a href="../causality_from_uncertain_data_RandomSequencesTest/" title="Random chunk resampling" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../causality_from_uncertain_data_RandomSequencesTest/" title="RandomSequencesTest" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Random chunk resampling
+                RandomSequencesTest
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
