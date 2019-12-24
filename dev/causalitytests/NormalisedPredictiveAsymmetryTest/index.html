@@ -40,7 +40,7 @@
     
     
       
-        <title>ExactSimplexIntersectionTest - CausalityTools.jl</title>
+        <title>NormalisedPredictiveAsymmetryTest - CausalityTools.jl</title>
       
     
     
@@ -96,6 +96,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#normalised-predictive-asymmetry" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -118,7 +122,7 @@
                 CausalityTools.jl
               </span>
               <span class="md-header-nav__topic">
-                ExactSimplexIntersectionTest
+                NormalisedPredictiveAsymmetryTest
               </span>
             
           
@@ -458,12 +462,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
     <label class="md-nav__link" for="nav-3-4">
       Transfer entropy
@@ -527,18 +529,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="ExactSimplexIntersectionTest" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ExactSimplexIntersectionTest/" title="ExactSimplexIntersectionTest" class="md-nav__link">
       ExactSimplexIntersectionTest
     </a>
-    
   </li>
 
         
@@ -551,10 +546,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
     
     <label class="md-nav__link" for="nav-3-5">
       Predictive asymmetry
@@ -582,11 +579,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../NormalisedPredictiveAsymmetryTest/" title="NormalisedPredictiveAsymmetryTest" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="NormalisedPredictiveAsymmetryTest" class="md-nav__link md-nav__link--active">
       NormalisedPredictiveAsymmetryTest
     </a>
+    
   </li>
 
         
@@ -1351,74 +1357,60 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/kahaaga/CausalityTools.jl/edit/master/docs/causalitytests/ExactSimplexIntersectionTest.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/kahaaga/CausalityTools.jl/edit/master/docs/causalitytests/NormalisedPredictiveAsymmetryTest.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>ExactSimplexIntersectionTest</h1>
-                
-                <p><a id='CausalityTools.CausalityTests.ExactSimplexIntersectionTest' href='#CausalityTools.CausalityTests.ExactSimplexIntersectionTest'>#</a>
-<strong><code>CausalityTools.CausalityTests.ExactSimplexIntersectionTest</code></strong> &mdash; <em>Type</em>.</p>
-<div class="highlight"><pre><span></span><span class="n">ExactSimplexIntersectionTest</span><span class="p">(</span><span class="n">k</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">l</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">m</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="n">τ</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
-    <span class="n">estimator</span><span class="o">::</span><span class="n">BinningTransferEntropyEstimator</span> <span class="o">=</span> <span class="n">TransferOperatorGrid</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">),</span>
-    <span class="n">n_pts</span><span class="o">::</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">binning_summary_statistic</span><span class="o">::</span><span class="kt">Function</span> <span class="o">=</span> <span class="n">StatsBase</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span>
-    <span class="n">binning</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="n">RectangularBinning</span><span class="p">,</span> <span class="kt">Vector</span><span class="p">{</span><span class="n">RectangularBinning</span><span class="p">}},</span>
-    <span class="n">ηs</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">AbstractVector</span><span class="p">{</span><span class="kt">Int</span><span class="p">}})</span>
+                <p><a id='normalised_predictive_asymmetry-1'></a></p>
+<h1 id="normalised-predictive-asymmetry">Normalised predictive asymmetry</h1>
+<p><a id='CausalityTools.CausalityTests.NormalisedPredictiveAsymmetryTest' href='#CausalityTools.CausalityTests.NormalisedPredictiveAsymmetryTest'>#</a>
+<strong><code>CausalityTools.CausalityTests.NormalisedPredictiveAsymmetryTest</code></strong> &mdash; <em>Type</em>.</p>
+<div class="highlight"><pre><span></span><span class="n">NormalisedPredictiveAsymmetryTest</span><span class="p">(</span><span class="n">predictive_test</span><span class="o">::</span><span class="n">CausalityTest</span><span class="p">,</span> <span class="n">f</span><span class="o">::</span><span class="kt">Number</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 
-<p>The parameters for a transfer entropy test where the invariant measure is estimated using an approximation to the transfer operator over a triangulation of the delay reconstruction [1]. Essentially, this allows the generation of an unlimited amount of points from the transfer operator. Transfer entropy then can be estimated by superimposing a rectangular grid as usual over the points generated from the  transfer operator.</p>
-<p><strong>Notes</strong></p>
+<p>The parameters for a normalised predictive asymmetry causality test [1]. For the  non-normalised version, see <a href="../PredictiveAsymmetryTest/#CausalityTools.CausalityTests.PredictiveAsymmetryTest"><code>PredictiveAsymmetryTest</code></a>.</p>
+<p><strong>Mandatory keywords</strong></p>
 <ul>
-<li>Compared to the rectangular estimators, the exact simplex intersection approach is much slower.   However, it might be beneficial for sparse time series[1].   A faster triangulation estimator is the <code>ApproximateSimplexIntersectionTest</code>.</li>
-<li>If you're doing any sort of sensitivity analysis over binning schemes, then use the low-level   estimators to first construct the invariant measure over the triangulation. You can then   estimate transfer entropy "for free" from the points you generate from the triangulation.   Over these points you can superimpose any grid you want and quickly compute transfer entropy   using one of the rectangular estimators.</li>
+<li><strong><code>predictive_test</code></strong>: An instance of a predictive causality test that explicitly    uses prediction lags (e.g. <a href="../VisitationFrequencyTest/#CausalityTools.CausalityTests.VisitationFrequencyTest"><code>VisitationFrequencyTest</code></a> or    <a href="../TransferOperatorGridTest/#CausalityTools.CausalityTests.TransferOperatorGridTest"><code>TransferOperatorGridTest</code></a>).</li>
+<li><strong><code>f::Number</code></strong>: The normalisation factor.</li>
 </ul>
-<p><strong>Mandatory keyword arguments</strong></p>
-<ul>
-<li><strong><code>binning::RectangularBinning</code></strong>: An instance of a <a href="../../causalitytoolsbase/discretization/#CausalityToolsBase.RectangularBinning"><code>RectangularBinning</code></a> that dictates   how the delay embedding is discretized.</li>
-<li><strong><code>ηs</code></strong>: The prediction lags (that gos into the <span><span class="MathJax_Preview">T_{f}</span><script type="math/tex">T_{f}</script></span> component of the embedding).</li>
-</ul>
-<p><strong>Optional keyword arguments</strong></p>
-<ul>
-<li><strong><code>k::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">T_{f}</span><script type="math/tex">T_{f}</script></span> component of the embedding.</li>
-<li><strong><code>l::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">T_{pp}</span><script type="math/tex">T_{pp}</script></span> component of the embedding.</li>
-<li><strong><code>m::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">S_{pp}</span><script type="math/tex">S_{pp}</script></span> component of the embedding.</li>
-<li><strong><code>n::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">C_{pp}</span><script type="math/tex">C_{pp}</script></span> component of the embedding.</li>
-<li><strong><code>τ::Int</code></strong>: The embedding lag. Default is <code>τ = 1</code>.</li>
-<li><strong><code>estimator::Union{VisitationFrequency, TransferOperatorGrid}</code></strong>: A <code>VisitationFrequency</code>   or a <code>TransferOperatorGrid</code> estimator instance.</li>
-<li><strong><code>n_pts::Int</code></strong>: The number of points to generate from the invariant distribution   over the triangulation. It is over these points transfer entropy is finally   generated using the provided rectangular <code>estimator</code>. Defaults to <code>n_pts = 10000</code>.</li>
-<li><strong><code>binning_summary_statistic::Function</code></strong>: A summary statistic to summarise the   transfer entropy values if multiple binnings are provided.</li>
-</ul>
+<p><strong>About the prediction lags</strong></p>
+<p>The prediction lags in the predictive causality test must consist of <code>n</code> negative  integers and <code>n</code> positive integers that are symmetric around zero. </p>
+<p>In other words, negative lags  must exactly match the positive lags but with opposite  sign. The zero lag can be included, but will be ignored, so it is possible to give  ranges too.</p>
 <p><strong>Examples</strong></p>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">DynamicalSystems</span>
+<p>Let's define a a transfer entropy test with which to compute transfer entropies symmetrically around lag zero. We'll use that as input to the predictive asymmetry test.</p>
+<div class="highlight"><pre><span></span><span class="n">bin</span> <span class="o">=</span> <span class="n">RectangularBinning</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c"># divide each axis into 4 equal-length intervals</span>
+<span class="n">ηs</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="o">:-</span><span class="mi">1</span><span class="p">;</span> <span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span> <span class="c"># exclude the zero lag (it is irrelevant for the asymmetry)</span>
+<span class="n">test_visitfreq</span> <span class="o">=</span> <span class="n">VisitationFrequencyTest</span><span class="p">(</span><span class="n">binning</span> <span class="o">=</span> <span class="n">bin</span><span class="p">,</span> <span class="n">ηs</span> <span class="o">=</span> <span class="n">ηs</span><span class="p">)</span>
 
-<span class="c"># Short time series of two coupled logistic maps (x drives y)</span>
-<span class="n">sys</span> <span class="o">=</span> <span class="n">logistic2_unidir</span><span class="p">(</span><span class="n">c_xy</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">npts</span> <span class="o">=</span> <span class="mi">75</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">columns</span><span class="p">(</span><span class="n">trajectory</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="n">npts</span><span class="p">,</span> <span class="n">Ttr</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">))</span>
-
-<span class="c"># average over a few different binning schemes, use a few different</span>
-<span class="c"># prediction lags and use the transfer operator grid estimator on the point</span>
-<span class="c"># cloud generated from the invariant measure over the triangulation.</span>
-<span class="n">binnings</span> <span class="o">=</span> <span class="p">[</span><span class="n">RectangularBinning</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">estimator</span> <span class="o">=</span> <span class="n">TransferOperatorGrid</span><span class="p">()</span>
-<span class="n">ηs</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">3</span>
-
-<span class="c"># Perform causality test, both from x to y and y to x</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">ExactSimplexIntersectionTest</span><span class="p">(</span><span class="n">binning</span> <span class="o">=</span> <span class="n">binnings</span><span class="p">,</span> <span class="n">estimator</span> <span class="o">=</span> <span class="n">estimator</span><span class="p">,</span> <span class="n">ηs</span> <span class="o">=</span> <span class="n">ηs</span><span class="p">)</span>
-<span class="n">te_xtoy</span> <span class="o">=</span> <span class="n">causality</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
-<span class="n">te_ytox</span> <span class="o">=</span> <span class="n">causality</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+<span class="c"># Normalising predictive asymmetry values to f = 1.0 times the mean transfer entropy.</span>
+<span class="n">NormalisedPredictiveAsymmetryTest</span><span class="p">(</span><span class="n">predictive_test</span> <span class="o">=</span> <span class="n">test_visitfreq</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 
 <p><strong>References</strong></p>
 <ol>
-<li>Diego, David, Kristian Agasøster Haaga, and Bjarte Hannisdal. "Transfer entropy computation  using the Perron-Frobenius operator." Physical Review E 99.4 (2019): 042212.  <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.042212">https://journals.aps.org/pre/abstract/10.1103/PhysRevE.99.042212</a></li>
+<li>Diego, David, Kristian Agasøster Haaga, Jo Brendryen, and Bjarte Hannisdal.   A simple test for causal asymmetry in complex systems. In prep.</li>
 </ol>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/46ce4d79337bdd257ee2e3d2f4bb1c55ff0a5030/base/#L0-L84' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/46ce4d79337bdd257ee2e3d2f4bb1c55ff0a5030/base/#L0-L41' class='documenter-source'>source</a><br></p>
                 
                   
                 
@@ -1439,7 +1431,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ApproximateSimplexIntersectionTest/" title="ApproximateSimplexIntersectionTest" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../PredictiveAsymmetryTest/" title="PredictiveAsymmetryTest" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1448,19 +1440,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                ApproximateSimplexIntersectionTest
+                PredictiveAsymmetryTest
               </span>
             </div>
           </a>
         
         
-          <a href="../PredictiveAsymmetryTest/" title="PredictiveAsymmetryTest" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../causality_from_uncertain_data_naive/" title="Naive resampling" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                PredictiveAsymmetryTest
+                Naive resampling
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
