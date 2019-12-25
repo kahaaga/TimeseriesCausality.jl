@@ -6,6 +6,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/causalitytests/causality_tests_overview/</loc>
+     <lastmod>2019-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/causalitytests/causality_tests/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
@@ -17,11 +22,6 @@
     </url>
     <url>
      <loc>/causalitytests/causality_from_dynamical_systems/</loc>
-     <lastmod>2019-12-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>/causalitytests/causality_tests_overview/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -141,7 +141,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/transferentropy/overview_te/</loc>
+     <lastmod>2019-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/transferentropy/TE_estimators/</loc>
+     <lastmod>2019-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/transferentropy/generalised_delay_reconstructions/</loc>
+     <lastmod>2019-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/transferentropy/assigning_marginals/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -157,6 +172,11 @@
     </url>
     <url>
      <loc>/transferentropy/examples_TE_different_partitionings/</loc>
+     <lastmod>2019-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/PredictiveAsymmetry/predictive_asymmetry/</loc>
      <lastmod>2019-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>

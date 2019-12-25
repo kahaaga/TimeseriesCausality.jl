@@ -46,6 +46,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
       
     
     
@@ -54,8 +60,8 @@
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
@@ -65,7 +71,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="light-blue">
   
     <svg class="md-svg">
       <defs>
@@ -192,6 +200,101 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Introduction and contents" class="md-tabs__link">
+        Introduction and contents
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Estimating causality" class="md-tabs__link md-tabs__link--active">
+          Estimating causality
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../causalitytoolsbase/delay_reconstructions/" title="Package ecosystem" class="md-tabs__link">
+          Package ecosystem
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../surrogates/surrogates_overview/" title="Surrogate data" class="md-tabs__link">
+          Surrogate data
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../example_systems/example_systems_overview/" title="Example systems" class="md-tabs__link">
+          Example systems
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tutorials/list_of_tutorials/" title="Tutorials/examples" class="md-tabs__link">
+          Tutorials/examples
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -249,10 +352,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Estimating causality
@@ -260,68 +365,6 @@
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         Estimating causality
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_tests/" title="From scalar time series" class="md-nav__link">
-      From scalar time series
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data_naive/" title="From uncertain time series" class="md-nav__link">
-      From uncertain time series
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_dynamical_systems/" title="From dynamical systems" class="md-nav__link">
-      From dynamical systems
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Causality tests
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Causality tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -393,6 +436,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-wrapper-types-for-the-parameters" title="Why wrapper types for the parameters?" class="md-nav__link">
+    Why wrapper types for the parameters?
+  </a>
+  
+</li>
+      
       
       
       
@@ -409,16 +459,52 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../causality_tests/" title="From scalar time series" class="md-nav__link">
+      From scalar time series
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_uncertain_data_naive/" title="From uncertain time series" class="md-nav__link">
+      From uncertain time series
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_dynamical_systems/" title="From dynamical systems" class="md-nav__link">
+      From dynamical systems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
     
-    <label class="md-nav__link" for="nav-3-2">
-      Tests
+    <label class="md-nav__link" for="nav-2-5">
+      Causality tests
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
-        Tests
+      <label class="md-nav__title" for="nav-2-5">
+        Causality tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -430,13 +516,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-1" type="checkbox" id="nav-2-5-1">
     
-    <label class="md-nav__link" for="nav-3-2-1">
+    <label class="md-nav__link" for="nav-2-5-1">
       Cross mappings
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-1">
+      <label class="md-nav__title" for="nav-2-5-1">
         Cross mappings
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -478,13 +564,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-2" type="checkbox" id="nav-2-5-2">
     
-    <label class="md-nav__link" for="nav-3-2-2">
+    <label class="md-nav__link" for="nav-2-5-2">
       Distance based
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-2">
+      <label class="md-nav__title" for="nav-2-5-2">
         Distance based
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -526,13 +612,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-3" type="checkbox" id="nav-2-5-3">
     
-    <label class="md-nav__link" for="nav-3-2-3">
+    <label class="md-nav__link" for="nav-2-5-3">
       Transfer entropy
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-3">
+      <label class="md-nav__title" for="nav-2-5-3">
         Transfer entropy
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -610,13 +696,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5-4" type="checkbox" id="nav-2-5-4">
     
-    <label class="md-nav__link" for="nav-3-2-4">
+    <label class="md-nav__link" for="nav-2-5-4">
       Predictive asymmetry
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-4">
+      <label class="md-nav__title" for="nav-2-5-4">
         Predictive asymmetry
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -675,13 +761,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
     
-    <label class="md-nav__link" for="nav-3-3">
+    <label class="md-nav__link" for="nav-2-6">
       Meta-tests for uncertainty handling and subsampling
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
+      <label class="md-nav__title" for="nav-2-6">
         Meta-tests for uncertainty handling and subsampling
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -776,13 +862,32 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
-      CausalityToolsBase
+    <label class="md-nav__link" for="nav-3">
+      Package ecosystem
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
+        Package ecosystem
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      CausalityToolsBase
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
         CausalityToolsBase
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -816,10 +921,10 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -828,21 +933,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-3-3">
       PerronFrobenius
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
         PerronFrobenius
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -876,21 +981,21 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-3-4">
       Transfer entropy
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
         Transfer entropy
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -902,8 +1007,44 @@
 
 
   <li class="md-nav__item">
+    <a href="../../transferentropy/overview_te/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../transferentropy/TE_estimators/" title="Estimators" class="md-nav__link">
       Estimators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../transferentropy/generalised_delay_reconstructions/" title="Generalised delay embedding" class="md-nav__link">
+      Generalised delay embedding
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../transferentropy/assigning_marginals/" title="Assigning marginals" class="md-nav__link">
+      Assigning marginals
     </a>
   </li>
 
@@ -939,13 +1080,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-4" type="checkbox" id="nav-7-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-7" type="checkbox" id="nav-3-4-7">
     
-    <label class="md-nav__link" for="nav-7-4">
+    <label class="md-nav__link" for="nav-3-4-7">
       Examples
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-7">
         Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -972,21 +1113,33 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PredictiveAsymmetry/predictive_asymmetry/" title="Predictive asymmetry" class="md-nav__link">
+      Predictive asymmetry
+    </a>
+  </li>
+
+        
+          
+          
+          
 
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-3-6">
       CrossMappings
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
         CrossMappings
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1032,10 +1185,10 @@
     </nav>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
@@ -1044,16 +1197,21 @@
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
     <a href="../../JointDistanceDistribution/joint_distance_distribution/" title="Joint distance distribution" class="md-nav__link">
       Joint distance distribution
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1064,14 +1222,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-11">
-      TimeseriesSurrogates
+    <label class="md-nav__link" for="nav-4">
+      Surrogate data
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        TimeseriesSurrogates
+      <label class="md-nav__title" for="nav-4">
+        Surrogate data
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1160,13 +1318,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-12">
+    <label class="md-nav__link" for="nav-5">
       Example systems
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
+      <label class="md-nav__title" for="nav-5">
         Example systems
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1232,13 +1390,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-13">
+    <label class="md-nav__link" for="nav-6">
       Tutorials/examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-13">
+      <label class="md-nav__title" for="nav-6">
         Tutorials/examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1263,13 +1421,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
     
-    <label class="md-nav__link" for="nav-13-2">
+    <label class="md-nav__link" for="nav-6-2">
       Causality from scalar time series
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-13-2">
+      <label class="md-nav__title" for="nav-6-2">
         Causality from scalar time series
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1299,13 +1457,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
     
-    <label class="md-nav__link" for="nav-13-3">
+    <label class="md-nav__link" for="nav-6-3">
       Causality from uncertain time series
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-13-3">
+      <label class="md-nav__title" for="nav-6-3">
         Causality from uncertain time series
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1359,13 +1517,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-4" type="checkbox" id="nav-13-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
     
-    <label class="md-nav__link" for="nav-13-4">
+    <label class="md-nav__link" for="nav-6-4">
       Worked examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-13-4">
+      <label class="md-nav__title" for="nav-6-4">
         Worked examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1460,6 +1618,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-wrapper-types-for-the-parameters" title="Why wrapper types for the parameters?" class="md-nav__link">
+    Why wrapper types for the parameters?
+  </a>
+  
+</li>
+      
       
       
       
@@ -1482,10 +1647,8 @@
                 <p><a id='causality_tests_overview-1'></a></p>
 <h1 id="list-of-causalitytests">List of <code>CausalityTest</code>s</h1>
 <p>Most time series causality statistics, although many are so-called non-parameteric, require the analyst to provide some parameters for their estimation. Outputs  may be vastly different based on the parameters chosen for a test.</p>
-<p>To systematically deal with this fact, we create estimator-specific <a href="https://docs.julialang.org/en/v1/manual/types/#Composite-Types-1">composite types</a> for  the different causality statistics. Every estimator is represented by a compositite types whose fields are the parameters of the test. A causality test is therefore uniquely defined  by its parameters. Available causality tests are listed below.</p>
-<p>The advantage of this type-based approach is that we can have a unified syntax to  estimate time series causality statistics, using the <a href="../causality_tests/#CausalityToolsBase.causality-Tuple{AbstractArray{T,1} where T,AbstractArray{T,1} where T,CausalityTest}"><code>causality(source::AbstractVector, target::AbstractVector, test::CausalityTest)</code></a> method.</p>
-<p>!!! note
-    It is recommended to use the <code>causality</code> methods to estimate causality statistics from  your time series. However, if you wish to use the low-level methods directly, then these are available from the method-specific pages in the meny.</p>
+<p>To systematically deal with this fact, we create estimator-specific <a href="https://docs.julialang.org/en/v1/manual/types/#Composite-Types-1">composite types</a> for  the different causality statistics. Every estimator is represented by a composite types whose fields are the parameters of the test. A causality test is therefore uniquely defined  by its parameters. Available causality tests are listed below.</p>
+<p>The advantage of this type-based approach is that we can have a unified syntax to  estimate time series causality statistics, using the <a href="../causality_tests/#CausalityToolsBase.causality-Tuple{AbstractArray{T,1} where T,AbstractArray{T,1} where T,CausalityTest}"><code>causality(source::AbstractVector, target::AbstractVector, test::CausalityTest)</code></a> method, which is all a beginner-user needs to learn. The output of a call to <code>causality</code> depends on which <code>test</code> is provided,  but the input format is always the same: your time series, plus a causality test.</p>
 <p><a id='Distance-based-tests-1'></a></p>
 <h2 id="distance-based-tests">Distance based tests</h2>
 <ul>
@@ -1513,9 +1676,35 @@
 <p><a id='Applying-the-tests-1'></a></p>
 <h2 id="applying-the-tests">Applying the tests</h2>
 <p>All tests can be used to compute causality statistics on empirical  <a href="../causality_tests/#causality_tests-1">scalar valued time series</a>,  <a href="../causality_from_uncertain_data_naive/#causality_uncertain_naiveresampling-1">uncertain time series</a> and directly  <a href="../causality_from_dynamical_systems/#causality_dynamical_systems-1">from dynamical systems</a> through the <code>causality</code> method.</p>
+<p>Low-level causality statistics and their different methods/estimators are described on the following pages:</p>
+<ul>
+<li><a href="../../PredictiveAsymmetry/predictive_asymmetry/#predictive_asymmetry_overview-1">Predictive asymmetry</a></li>
+<li><a href="../../transferentropy/overview_te/#transferentropy_overview-1">Transfer entropy</a></li>
+<li><a href="../../crossmappings/ccm/overview/#crossmapping_overview-1">Cross mapping</a></li>
+<li><a href="../../SMeasure/s_measure/#Smeasure_overview-1">S-Measure</a></li>
+<li><a href="../../JointDistanceDistribution/joint_distance_distribution/#joint_distance_distribution_overview-1">Joint distance distribution</a></li>
+</ul>
 <p><a id='Schemes-for-uncertainty-handling-1'></a></p>
 <h2 id="schemes-for-uncertainty-handling">Schemes for uncertainty handling</h2>
 <p>If you want to apply a causality test to time series with uncertainties, you can combine any of the tests above with the provided <a href="../causality_from_uncertain_data/#causality_uncertaindata-1">uncertainty handling, subsampling and resampling schemes</a>.</p>
+<p><a id='Why-wrapper-types-for-the-parameters?-1'></a></p>
+<h2 id="why-wrapper-types-for-the-parameters">Why wrapper types for the parameters?</h2>
+<p>There may be many ways of estimating a particular causality statistic. For example,  there are many  transfer entropy estimators, for example </p>
+<ul>
+<li><a href="../../transferentropy/TE_estimators/#TransferEntropy.VisitationFrequency"><code>VisitationFrequency</code></a>, and</li>
+<li><a href="../@ref"><code>NearestNeigboursMI</code></a></li>
+</ul>
+<p>Their corresponding  <code>transferentropy</code> methods accept different inputs:</p>
+<ul>
+<li><a href="../../transferentropy/estimating_TE/#TransferEntropy.transferentropy-Tuple{Any,TEVars,RectangularBinning,BinningTransferEntropyEstimator}"><code>transferentropy(pts, vars::TEVars, ϵ::RectangularBinning, estimator::BinningTransferEntropyEstimator)</code></a></li>
+<li><a href="../../transferentropy/estimating_TE/#TransferEntropy.transferentropy-Tuple{Any,TEVars,NearestNeighbourMI}"><code>transferentropy(pts, vars::TEVars, estimator::NearestNeighbourMI)</code></a></li>
+</ul>
+<p>Wouldn't it be nice to be able to use the same syntax for both estimators? Or for five more estimators  that quantify causality in different manners? Instead of  providing test parameters directly to the methods (e.g. <a href="../../transferentropy/convenience_methods_te/#TransferEntropy.transferentropy-Tuple{AbstractArray{#s141,1} where #s141&lt;:Real,AbstractArray{#s140,1} where #s140&lt;:Real,Int64,Int64,Int64,Union{RectangularBinning, Array{RectangularBinning,1}}}"><code>transferentropy</code></a>) directly,  we can create a test instance that contains all the test parameters.</p>
+<ul>
+<li><code>test_vf = VisitationFrequencyTest(binning = RectangularBinning(5), ηs = 1:5)</code></li>
+<li><code>test_nn = NearestNeighbourMITest(ηs = 1:5)</code></li>
+</ul>
+<p>The <code>causality</code> function and its methods provide a common interface for testing causal hypotheses. For analysing time series, all you need to do is provide a <code>source</code> and a <code>target</code>. Then, choose  one of the <a href="../causality_tests/#causality_tests-1">available causality tests</a> to quantify the (directional) dynamical dependence between <code>source</code> and <code>target</code>. If your data are uncertain, you can  use <a href="../causality_from_uncertain_data/#causality_uncertaindata-1"><code>resampling schemes</code></a> to deal with that.</p>
                 
                   
                 
@@ -1536,7 +1725,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../causality_from_dynamical_systems/" title="From dynamical systems" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Introduction and contents" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1545,19 +1734,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                From dynamical systems
+                Introduction and contents
               </span>
             </div>
           </a>
         
         
-          <a href="../CrossMappingTest/" title="CrossMappingTest" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../causality_tests/" title="From scalar time series" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CrossMappingTest
+                From scalar time series
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1580,6 +1769,13 @@
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/kahaaga/CausalityTools.jl" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>
