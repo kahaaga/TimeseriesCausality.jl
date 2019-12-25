@@ -1610,17 +1610,17 @@
 </pre></div>
 
 <p>Column-wise random phases Fourier surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/71dd85bd89da2051796ad765e588843df11c77c7/src/surrogates/surrogates.jl#L36-L42' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/41c8b5f948d1c8b4230e873ff71cf1e7420c54f3/src/surrogates/surrogates.jl#L36-L42' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>randomphases(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </pre></div>
 
 <p>Column-wise random phases Fourier surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/71dd85bd89da2051796ad765e588843df11c77c7/src/surrogates/surrogates.jl#L147-L152' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/41c8b5f948d1c8b4230e873ff71cf1e7420c54f3/src/surrogates/surrogates.jl#L147-L152' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>randomphases(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </pre></div>
 
 <p>Column-wise random phases Fourier surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/71dd85bd89da2051796ad765e588843df11c77c7/src/surrogates/surrogates.jl#L262-L267' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/41c8b5f948d1c8b4230e873ff71cf1e7420c54f3/src/surrogates/surrogates.jl#L262-L267' class='documenter-source'>source</a><br></p>
 <p><a id='Example-1'></a></p>
 <h3 id="example">Example</h3>
 <p>Generating random phase surrogates is done as follows.</p>
