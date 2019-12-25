@@ -40,7 +40,7 @@
     
     
       
-        <title>Naive resampling - CausalityTools.jl</title>
+        <title>From uncertain time series - CausalityTools.jl</title>
       
     
     
@@ -96,7 +96,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#naive-resampling" tabindex="1" class="md-skip">
+      <a href="#testing-for-causality-from-uncertain-time-series" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -122,7 +122,7 @@
                 CausalityTools.jl
               </span>
               <span class="md-header-nav__topic">
-                Naive resampling
+                From uncertain time series
               </span>
             
           
@@ -239,8 +239,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
-      Home
+    <a href="../.." title="Introduction and contents" class="md-nav__link">
+      Introduction and contents
     </a>
   </li>
 
@@ -249,17 +249,19 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      Causality estimation
+      Estimating causality
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Causality estimation
+        Estimating causality
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -270,8 +272,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../causality_from_time_series/" title="From time series" class="md-nav__link">
-      From time series
+    <a href="../causality_tests/" title="From scalar time series" class="md-nav__link">
+      From scalar time series
     </a>
   </li>
 
@@ -280,35 +282,69 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-    <label class="md-nav__link" for="nav-2-2">
-      From uncertain time series
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         From uncertain time series
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data/" title="Methods" class="md-nav__link">
-      Methods
+    
+    <a href="./" title="From uncertain time series" class="md-nav__link md-nav__link--active">
+      From uncertain time series
     </a>
-  </li>
-
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uncertainties-only-in-values" title="Uncertainties only in values" class="md-nav__link">
+    Uncertainties only in values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncertainties-in-both-indices-and-values" title="Uncertainties in both indices and values" class="md-nav__link">
+    Uncertainties in both indices and values
+  </a>
+  
+</li>
         
       </ul>
     </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -354,7 +390,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../causality_tests/" title="Overview" class="md-nav__link">
+    <a href="../causality_tests_overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -370,10 +406,29 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
     
     <label class="md-nav__link" for="nav-3-2">
-      Cross mappings
+      Tests
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-2">
+        Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      Cross mappings
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
         Cross mappings
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -415,13 +470,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
     
-    <label class="md-nav__link" for="nav-3-3">
+    <label class="md-nav__link" for="nav-3-2-2">
       Distance based
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
         Distance based
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -463,13 +518,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
     
-    <label class="md-nav__link" for="nav-3-4">
+    <label class="md-nav__link" for="nav-3-2-3">
       Transfer entropy
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
         Transfer entropy
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -547,13 +602,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
     
-    <label class="md-nav__link" for="nav-3-5">
+    <label class="md-nav__link" for="nav-3-2-4">
       Predictive asymmetry
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-4">
         Predictive asymmetry
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -588,28 +643,38 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../abstract_test_types/" title="Abstract test types" class="md-nav__link">
+      Abstract test types
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
 
-    
-      
-      
-      
-
-  
+        
+          
+          
+          
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
-    <label class="md-nav__link" for="nav-4">
-      Uncertainty handling and subsampling
+    <label class="md-nav__link" for="nav-3-3">
+      Meta-tests for uncertainty handling and subsampling
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        Uncertainty handling and subsampling
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Meta-tests for uncertainty handling and subsampling
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -618,67 +683,10 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Naive resampling
-      </label>
-    
-    <a href="./" title="Naive resampling" class="md-nav__link md-nav__link--active">
-      Naive resampling
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#uncertainties-only-in-values" title="Uncertainties only in values" class="md-nav__link">
-    Uncertainties only in values
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uncertainties-in-both-indices-and-values" title="Uncertainties in both indices and values" class="md-nav__link">
-    Uncertainties in both indices and values
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../causality_from_uncertain_data_naive_constrained/" title="ConstrainedTest" class="md-nav__link">
-      ConstrainedTest
+    <a href="../causality_from_uncertain_data/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -691,6 +699,18 @@
   <li class="md-nav__item">
     <a href="../causality_from_uncertain_data_binneddatacausalitytest/" title="BinnedDataCausalityTest" class="md-nav__link">
       BinnedDataCausalityTest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../causality_from_uncertain_data_naive_constrained/" title="ConstrainedTest" class="md-nav__link">
+      ConstrainedTest
     </a>
   </li>
 
@@ -735,6 +755,11 @@
     </nav>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -743,17 +768,29 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-4">
       CausalityToolsBase
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-4">
         CausalityToolsBase
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../causalitytoolsbase/delay_reconstructions/" title="Generalised delay reconstructions" class="md-nav__link">
+      Generalised delay reconstructions
+    </a>
+  </li>
+
         
           
           
@@ -767,20 +804,20 @@
   </li>
 
         
-          
-          
-          
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
-    <a href="../../causalitytoolsbase/delay_reconstructions/" title="Delay reconstruction" class="md-nav__link">
-      Delay reconstruction
+    <a href="../../simplices/Simplices/" title="Simplices" class="md-nav__link">
+      Simplices
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -994,8 +1031,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/joint_distance_distribution/" title="Joint distance distribution" class="md-nav__link">
-      Joint distance distribution
+    <a href="../../SMeasure/s_measure/" title="S-measure" class="md-nav__link">
+      S-measure
     </a>
   </li>
 
@@ -1006,8 +1043,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../syntax_overview/" title="Syntax overview" class="md-nav__link">
-      Syntax overview
+    <a href="../../JointDistanceDistribution/joint_distance_distribution/" title="Joint distance distribution" class="md-nav__link">
+      Joint distance distribution
     </a>
   </li>
 
@@ -1022,83 +1059,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
     <label class="md-nav__link" for="nav-11">
-      Example systems
+      TimeseriesSurrogates
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
-        Example systems
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../example_systems/example_systems_overview/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../example_systems/example_systems_discrete/" title="Discrete systems" class="md-nav__link">
-      Discrete systems
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../example_systems/example_systems_continuous/" title="Continuous systems" class="md-nav__link">
-      Continuous systems
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../example_systems/noise/" title="Noise processes" class="md-nav__link">
-      Noise processes
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
-    
-    <label class="md-nav__link" for="nav-12">
-      Surrogate data
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        Surrogate data
+        TimeseriesSurrogates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1114,25 +1079,6 @@
     </a>
   </li>
 
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12-2" type="checkbox" id="nav-12-2">
-    
-    <label class="md-nav__link" for="nav-12-2">
-      Methods
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-12-2">
-        Methods
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -1198,6 +1144,73 @@
     </nav>
   </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Example systems
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Example systems
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example_systems/example_systems_overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example_systems/example_systems_discrete/" title="Discrete systems" class="md-nav__link">
+      Discrete systems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example_systems/example_systems_continuous/" title="Continuous systems" class="md-nav__link">
+      Continuous systems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example_systems/noise/" title="Noise processes" class="md-nav__link">
+      Noise processes
+    </a>
+  </li>
+
         
       </ul>
     </nav>
@@ -1245,11 +1258,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-2" type="checkbox" id="nav-13-2">
     
     <label class="md-nav__link" for="nav-13-2">
-      Causality from scalar data
+      Causality from scalar time series
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-13-2">
-        Causality from scalar data
+        Causality from scalar time series
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1281,11 +1294,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13-3" type="checkbox" id="nav-13-3">
     
     <label class="md-nav__link" for="nav-13-3">
-      Causality from uncertain data
+      Causality from uncertain time series
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-13-3">
-        Causality from uncertain data
+        Causality from uncertain time series
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1405,16 +1418,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#uncertainties-only-in-values" title="Uncertainties only in values" class="md-nav__link">
     Uncertainties only in values
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#uncertainties-in-both-indices-and-values" title="Uncertainties in both indices and values" class="md-nav__link">
     Uncertainties in both indices and values
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1438,9 +1464,11 @@
                 
                 
                 <p><a id='causality_uncertain_naiveresampling-1'></a></p>
-<h1 id="naive-resampling">Naive resampling</h1>
+<h1 id="testing-for-causality-from-uncertain-time-series">Testing for causality from uncertain time series</h1>
+<p><a id='Syntax-1'></a></p>
+<h2 id="syntax">Syntax</h2>
 <p><a id='Uncertainties-only-in-values-1'></a></p>
-<h2 id="uncertainties-only-in-values">Uncertainties only in values</h2>
+<h3 id="uncertainties-only-in-values">Uncertainties only in values</h3>
 <p><a id='CausalityToolsBase.causality-Tuple{Union{AbstractUncertainValueDataset, AbstractArray{T,1} where T},Union{AbstractUncertainValueDataset, AbstractArray{T,1} where T},CausalityTest}' href='#CausalityToolsBase.causality-Tuple{Union{AbstractUncertainValueDataset, AbstractArray{T,1} where T},Union{AbstractUncertainValueDataset, AbstractArray{T,1} where T},CausalityTest}'>#</a>
 <strong><code>CausalityToolsBase.causality</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">causality</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test</span><span class="o">::</span><span class="n">CausalityTest</span><span class="p">)</span>
@@ -1481,9 +1509,9 @@
 <div class="highlight"><pre><span></span><span class="p">[</span><span class="n">causality</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yd</span><span class="p">,</span> <span class="n">pa_test</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/3ca9c6c6f099331f25b8c60ce38e30f8c9504a9a/src/causalitytests/causality_on_uncertaindata.jl#L165-L215' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/1162f6d992424d19e30ef1b60316e4dcc2f688fe/src/causalitytests/causality_on_uncertaindata.jl#L165-L215' class='documenter-source'>source</a><br></p>
 <p><a id='Uncertainties-in-both-indices-and-values-1'></a></p>
-<h2 id="uncertainties-in-both-indices-and-values">Uncertainties in both indices and values</h2>
+<h3 id="uncertainties-in-both-indices-and-values">Uncertainties in both indices and values</h3>
 <p><a id='CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,CausalityTest}' href='#CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,CausalityTest}'>#</a>
 <strong><code>CausalityToolsBase.causality</code></strong> &mdash; <em>Method</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">causality</span><span class="p">(</span><span class="n">source</span><span class="o">::</span><span class="n">AbstractUncertainIndexValueDataset</span><span class="p">,</span> 
@@ -1537,7 +1565,7 @@ pa_YX = causality(Y, X, pa_test)
 <span class="n">pa_YX</span> <span class="o">=</span> <span class="p">[</span><span class="n">causality</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">pa_test</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/3ca9c6c6f099331f25b8c60ce38e30f8c9504a9a/src/causalitytests/causality_on_uncertaindata.jl#L8-L74' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/1162f6d992424d19e30ef1b60316e4dcc2f688fe/src/causalitytests/causality_on_uncertaindata.jl#L8-L74' class='documenter-source'>source</a><br></p>
                 
                   
                 
@@ -1558,7 +1586,7 @@ pa_YX = causality(Y, X, pa_test)
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../NormalisedPredictiveAsymmetryTest/" title="NormalisedPredictiveAsymmetryTest" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../causality_tests/" title="From scalar time series" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1567,19 +1595,19 @@ pa_YX = causality(Y, X, pa_test)
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                NormalisedPredictiveAsymmetryTest
+                From scalar time series
               </span>
             </div>
           </a>
         
         
-          <a href="../causality_from_uncertain_data_naive_constrained/" title="ConstrainedTest" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../causality_from_dynamical_systems/" title="From dynamical systems" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                ConstrainedTest
+                From dynamical systems
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
