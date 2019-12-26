@@ -1666,17 +1666,17 @@
 </pre></div>
 
 <p>Iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of an array, where each column is a scalar-valued time series. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/73b24cebf56833e914da769c789c8cdf1d3e6227/src/surrogates/surrogates.jl#L101-L107' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/surrogates/surrogates.jl#L101-L107' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>iaaft(E::Embeddings.AbstractEmbedding; cols = 1:size(E.points, 1))
 </pre></div>
 
 <p>Column-wise iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of an embedding. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/73b24cebf56833e914da769c789c8cdf1d3e6227/src/surrogates/surrogates.jl#L212-L217' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/surrogates/surrogates.jl#L212-L217' class='documenter-source'>source</a><br></p>
 <div class="highlight"><pre><span></span>iaaft(d::DynamicalSystemsBase.Dataset; cols = 1:size(d, 2))
 </pre></div>
 
 <p>Iterated amplitude-adjusted Fourier transform (IAAFT) surrogate of a Dataset. <code>cols</code> controls which variables of the embedding are shuffled.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/73b24cebf56833e914da769c789c8cdf1d3e6227/src/surrogates/surrogates.jl#L324-L329' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/surrogates/surrogates.jl#L324-L329' class='documenter-source'>source</a><br></p>
 <p><a id='Examples-1'></a></p>
 <h2 id="examples">Examples</h2>
 <p><a id='Example-1-1'></a></p>
