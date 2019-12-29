@@ -1616,6 +1616,10 @@
                 
                 <p><a id='causality_uncertain_naiveresampling-1'></a></p>
 <h1 id="testing-for-causality-from-uncertain-time-series">Testing for causality from uncertain time series</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The use the causality tests with uncertain data, first load the  <a href="https://github.com/kahaaga/UncertainData.jl">UncertainData</a> package by running  <code>using UncertainData</code> in the Julia console.</p>
+</div>
 <p><a id='Syntax-1'></a></p>
 <h2 id="syntax">Syntax</h2>
 <p><a id='Uncertainties-only-in-values-1'></a></p>
@@ -1660,7 +1664,7 @@
 <div class="highlight"><pre><span></span><span class="p">[</span><span class="n">causality</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yd</span><span class="p">,</span> <span class="n">pa_test</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/causalitytests/causality_on_uncertaindata.jl#L165-L215' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/causalitytests/causality_on_uncertaindata.jl#L177-L227' class='documenter-source'>source</a><br></p>
 <p><a id='Uncertainties-in-both-indices-and-values-1'></a></p>
 <h3 id="uncertainties-in-both-indices-and-values">Uncertainties in both indices and values</h3>
 <p><a id='CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,CausalityTest}' href='#CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,CausalityTest}'>#</a>
@@ -1673,9 +1677,14 @@
 <p>Test for a causal influence from <code>source</code> to <code>target</code> using the provided causality <code>test</code>.</p>
 <p>The test is performed on a single draw of the values of <code>source</code> and <code>target</code>, disregarding the ordering resulting from resampling, but respecting the order of the points in the dataset.</p>
 <p><em>Note: if the uncertain values furnishing the indices have overlapping supports, you might  mess up the index-ordering (e.g. time-ordering) of the data points</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method uses <a href="https://github.com/kahaaga/UncertainData.jl"><code>UncertainData.jl</code></a> for  uncertainty handling. To use it, first run <code>using UncertainData</code> in the Julia console.</p>
+</div>
 <p><strong>Example</strong></p>
 <p>Generate some example data series x and y, where x influences y:</p>
-<div class="highlight"><pre><span></span><span class="n">n_pts</span> <span class="o">=</span> <span class="mi">300</span>
+<div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">UncertainData</span><span class="p">,</span> <span class="n">CausalityTools</span><span class="p">,</span> <span class="n">Distributions</span>
+<span class="n">n_pts</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="n">a₁</span><span class="p">,</span> <span class="n">a₂</span><span class="p">,</span> <span class="n">b₁</span><span class="p">,</span> <span class="n">b₂</span><span class="p">,</span> <span class="n">ξ₁</span><span class="p">,</span> <span class="n">ξ₂</span><span class="p">,</span> <span class="n">C₁₂</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span>
 
 <span class="n">D</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="n">n_pts</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> 
@@ -1716,7 +1725,7 @@ pa_YX = causality(Y, X, pa_test)
 <span class="n">pa_YX</span> <span class="o">=</span> <span class="p">[</span><span class="n">causality</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">pa_test</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">]</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/causalitytests/causality_on_uncertaindata.jl#L8-L74' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/causalitytests/causality_on_uncertaindata.jl#L8-L80' class='documenter-source'>source</a><br></p>
                 
                   
                 

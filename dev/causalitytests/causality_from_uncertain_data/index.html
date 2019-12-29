@@ -1534,6 +1534,10 @@
                 <p><a id='causality_uncertaindata-1'></a></p>
 <h1 id="list-of-causality-methods-for-uncertain-data">List of <code>causality</code> methods for uncertain data</h1>
 <p>If your time series are uncertain both either in indices, values or both, then use one of the following strategies to compute causality statistics over the uncertain time series.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Uncertain data handling relies on the <a href="https://github.com/kahaaga/UncertainData.jl">UncertainData</a>. To use the resampling schemes, you need to load this package by first running <code>using UncertainData</code>  in the Julia console.</p>
+</div>
 <ul>
 <li><a href="../causality_from_uncertain_data_naive/#causality_uncertain_naiveresampling-1">Naive resampling</a></li>
 <li><a href="../causality_from_uncertain_data_naive_constrained/#causality_uncertain_naiveconstrained_resampling-1">Naive constrained resampling</a></li>

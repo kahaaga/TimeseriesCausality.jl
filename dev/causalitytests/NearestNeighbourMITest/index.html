@@ -1542,8 +1542,23 @@
     <span class="n">ηs</span><span class="o">::</span><span class="kt">Union</span><span class="p">{</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">AbstractVector</span><span class="p">{</span><span class="kt">Int</span><span class="p">}})</span>
 </pre></div>
 
-<p>A transfer entropy test that estimates mutual information terms by counting nearest neighbours. </p>
-<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/46ce4d79337bdd257ee2e3d2f4bb1c55ff0a5030/base/#L0-L6' class='documenter-source'>source</a><br></p>
+<p>The parameters for a transfer entropy test using the <code>NearestNeighbourMI</code> estimator that estimates  mutual information terms using the counting of nearest neighbours.</p>
+<p><strong>Mandatory keyword arguments</strong></p>
+<ul>
+<li><strong><code>ηs</code></strong>: The prediction lags (that gos into the <span><span class="MathJax_Preview">T_{f}</span><script type="math/tex">T_{f}</script></span> component of the embedding).</li>
+</ul>
+<p><strong>Optional keyword arguments</strong></p>
+<ul>
+<li><strong><code>k::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">T_{f}</span><script type="math/tex">T_{f}</script></span> component of the embedding.</li>
+<li><strong><code>l::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">T_{pp}</span><script type="math/tex">T_{pp}</script></span> component of the embedding.</li>
+<li><strong><code>m::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">S_{pp}</span><script type="math/tex">S_{pp}</script></span> component of the embedding.</li>
+<li><strong><code>n::Int</code></strong>: The dimension of the <span><span class="MathJax_Preview">C_{pp}</span><script type="math/tex">C_{pp}</script></span> component of the embedding.</li>
+<li><strong><code>τ::Int</code></strong>: The embedding lag. Default is <code>τ = 1</code>.</li>
+<li><strong><code>metric</code></strong>: The distance metric to use for mutual information estimation.</li>
+<li><strong><code>k1</code></strong>: The number of nearest neighbours for the highest-dimensional mutual   information estimate. To minimize bias, choose <span><span class="MathJax_Preview">k_1 &lt; k_2</span><script type="math/tex">k_1 < k_2</script></span> if   <span><span class="MathJax_Preview">min(k_1, k_2) &lt; 10</span><script type="math/tex">min(k_1, k_2) < 10</script></span> (see fig. 16 in [1]). Beyond dimension 5, choosing   <span><span class="MathJax_Preview">k_1 = k_2</span><script type="math/tex">k_1 = k_2</script></span> results in fairly low bias, and a low number of nearest   neighbours, say <code>k1 = k2 = 4</code>, will suffice.</li>
+<li><strong><code>k2</code></strong>: The number of nearest neighbours for the lowest-dimensional mutual   information estimate. To minimize bias, choose <span><span class="MathJax_Preview">k_1 &lt; k_2</span><script type="math/tex">k_1 < k_2</script></span> if   if <span><span class="MathJax_Preview">min(k_1, k_2) &lt; 10</span><script type="math/tex">min(k_1, k_2) < 10</script></span> (see fig. 16 in [1]). Beyond dimension 5, choosing   <span><span class="MathJax_Preview">k_1 = k_2</span><script type="math/tex">k_1 = k_2</script></span> results in fairly low bias, and a low number of nearest   neighbours, say <code>k1 = k2 = 4</code>, will suffice.</li>
+</ul>
+<p><a target='_blank' href='https://github.com/JuliaLang/julia/blob/46ce4d79337bdd257ee2e3d2f4bb1c55ff0a5030/base/#L0-L37' class='documenter-source'>source</a><br></p>
                 
                   
                 

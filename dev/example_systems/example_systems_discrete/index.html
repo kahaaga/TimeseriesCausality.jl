@@ -1688,7 +1688,7 @@
                 
                 <p><a id='discrete_systems-1'></a></p>
 <h1 id="discrete-coupled-dynamical-systems">Discrete coupled dynamical systems</h1>
-<p><a id='Autoregressive-order-one-2D-system-1'></a></p>
+<p><a id='system_ar1-1'></a></p>
 <h2 id="autoregressive-order-one-2d-system">Autoregressive order one 2D system</h2>
 <p><a id='CausalityTools.Systems.ar1_unidir-Tuple{}' href='#CausalityTools.Systems.ar1_unidir-Tuple{}'>#</a>
 <strong><code>CausalityTools.Systems.ar1_unidir</code></strong> &mdash; <em>Method</em>.</p>
@@ -1701,14 +1701,14 @@
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-dx &amp;= a_1 x + \xi_{1} \\
-dy &amp;= b_1 y - c_{xy} x + \xi_{2},
+x(t+1) &amp;= a_1 x(t) + \xi_{1} \\
+y(t+1) &amp;= b_1 y(t) - c_{xy} x + \xi_{2},
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-dx &= a_1 x + \xi_{1} \\
-dy &= b_1 y - c_{xy} x + \xi_{2},
+x(t+1) &= a_1 x(t) + \xi_{1} \\
+y(t+1) &= b_1 y(t) - c_{xy} x + \xi_{2},
 \end{aligned}
 </script>
 </div>
@@ -1717,8 +1717,8 @@ dy &= b_1 y - c_{xy} x + \xi_{2},
 <ol>
 <li>Paluš, M., Krakovská, A., Jakubík, J., &amp; Chvosteková, M. (2018). Causality,  dynamical systems and the arrow of time. Chaos: An Interdisciplinary Journal of  Nonlinear Science, 28(7), 075307. <a href="http://doi.org/10.1063/1.5019944">http://doi.org/10.1063/1.5019944</a></li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/ar1.jl#L41-L64' class='documenter-source'>source</a><br></p>
-<p><a id='Nonlinear-3D-system-with-nonlinear-coupling-1'></a></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/ar1.jl#L41-L64' class='documenter-source'>source</a><br></p>
+<p><a id='system_nonlinear3d-1'></a></p>
 <h2 id="nonlinear-3d-system-with-nonlinear-coupling">Nonlinear 3D system with nonlinear coupling</h2>
 <p><a id='CausalityTools.Systems.nonlinear3d' href='#CausalityTools.Systems.nonlinear3d'>#</a>
 <strong><code>CausalityTools.Systems.nonlinear3d</code></strong> &mdash; <em>Function</em>.</p>
@@ -1752,8 +1752,8 @@ x_3(t+1) &= a_3 x_3 (1-x_3(t))^2  e^{-x_3(t)^2} + 0.4 \xi_{3}(t) + c x_{2}(t) + 
 <ol>
 <li>Gourévitch, B., Le Bouquin-Jeannès, R., &amp; Faucon, G. (2006). Linear and nonlinear   causality between signals: methods, examples and neurophysiological   applications. Biological Cybernetics, 95(4), 349–369.</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/nonlinear3D_linear_and_nonlinear_coupling.jl#L46-L73' class='documenter-source'>source</a><br></p>
-<p><a id='Unidirectionally-coupled-2D-logistic-maps-1'></a></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/nonlinear3D_linear_and_nonlinear_coupling.jl#L46-L73' class='documenter-source'>source</a><br></p>
+<p><a id='system_logistic2_unidir-1'></a></p>
 <h2 id="unidirectionally-coupled-2d-logistic-maps">Unidirectionally coupled 2D logistic maps</h2>
 <p><a id='CausalityTools.Systems.logistic2_unidir-Tuple{}' href='#CausalityTools.Systems.logistic2_unidir-Tuple{}'>#</a>
 <strong><code>CausalityTools.Systems.logistic2_unidir</code></strong> &mdash; <em>Method</em>.</p>
@@ -1767,14 +1767,14 @@ x_3(t+1) &= a_3 x_3 (1-x_3(t))^2  e^{-x_3(t)^2} + 0.4 \xi_{3}(t) + c x_{2}(t) + 
 <div>
 <div class="MathJax_Preview">
 \begin{aligned}
-dx &amp;= r_1 x(1 - x) \\
-dy &amp;= r_2 f(x,y)(1 - f(x,y)),
+x(t+1) &amp;= r_1 x(t)(1 - x(t)) \\
+y(t+1) &amp;= r_2 f(x,y)(1 - f(x,y)),
 \end{aligned}
 </div>
 <script type="math/tex; mode=display">
 \begin{aligned}
-dx &= r_1 x(1 - x) \\
-dy &= r_2 f(x,y)(1 - f(x,y)),
+x(t+1) &= r_1 x(t)(1 - x(t)) \\
+y(t+1) &= r_2 f(x,y)(1 - f(x,y)),
 \end{aligned}
 </script>
 </div>
@@ -1796,8 +1796,8 @@ f(x,y) = \dfrac{y + \frac{c_{xy}(x \xi )}{2}}{1 + \frac{c_{xy}}{2}(1+ \sigma )}
 <ol>
 <li>Diego, David, Kristian Agasøster Haaga, and Bjarte Hannisdal. "Transfer entropy computation   using the Perron-Frobenius operator." Physical Review E 99.4 (2019): 042212.</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/logistic2_unidir.jl#L54-L92' class='documenter-source'>source</a><br></p>
-<p><a id='Bidirectionally-coupled-2D-logistic-maps-1'></a></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/logistic2_unidir.jl#L54-L92' class='documenter-source'>source</a><br></p>
+<p><a id='system_logistic2_bidir-1'></a></p>
 <h2 id="bidirectionally-coupled-2d-logistic-maps">Bidirectionally coupled 2D logistic maps</h2>
 <p><a id='CausalityTools.Systems.logistic2_bidir-Tuple{}' href='#CausalityTools.Systems.logistic2_bidir-Tuple{}'>#</a>
 <strong><code>CausalityTools.Systems.logistic2_bidir</code></strong> &mdash; <em>Method</em>.</p>
@@ -1831,7 +1831,7 @@ f_{yx}^t &= \dfrac{x(t) + c_{yx}(y(t) + \sigma_{yx} \xi_{yx}^t )}{1 + c_{yx} (1 
 <ol>
 <li>Diego, David, Kristian Agasøster Haaga, and Bjarte Hannisdal. "Transfer entropy computation   using the Perron-Frobenius operator." Physical Review E 99.4 (2019): 042212.</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/logistic2_bidir.jl#L54-L85' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/logistic2_bidir.jl#L54-L85' class='documenter-source'>source</a><br></p>
 <p><a id='Forcing-of-two-independent-logistic-maps-from-common-logistic-map-driver-1'></a></p>
 <h2 id="forcing-of-two-independent-logistic-maps-from-common-logistic-map-driver">Forcing of two independent logistic maps from common logistic map driver</h2>
 <p><a id='CausalityTools.Systems.logistic3-Tuple{}' href='#CausalityTools.Systems.logistic3-Tuple{}'>#</a>
@@ -1864,7 +1864,7 @@ z(t+1) = (z(t)(r - r_3 z(t) + σ_z η_z)) \mod 1
 <ol>
 <li>Runge, Jakob. Causal network reconstruction from time series: From theoretical   assumptions to practical estimation, Chaos 28, 075310 (2018);   doi: 10.1063/1.5025050</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/logistic3.jl#L53-L84' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/logistic3.jl#L53-L84' class='documenter-source'>source</a><br></p>
 <p><a id='Unidirectional,-transitive-chain-of-logistic-maps-1'></a></p>
 <h2 id="unidirectional-transitive-chain-of-logistic-maps">Unidirectional, transitive chain of logistic maps</h2>
 <p><a id='CausalityTools.Systems.logistic4-Tuple{}' href='#CausalityTools.Systems.logistic4-Tuple{}'>#</a>
@@ -1874,7 +1874,7 @@ z(t+1) = (z(t)(r - r_3 z(t) + σ_z η_z)) \mod 1
 </pre></div>
 
 <p>Initialise a system of a transitive chain of four unidirectionally coupled logistic maps, where <span><span class="MathJax_Preview">y_1 \to y_2 \to y_3 \to y_4</span><script type="math/tex">y_1 \to y_2 \to y_3 \to y_4</script></span> [1]. Default  parameters are as in [1].</p>
-<p><em>Note: With the default parameters which are as in [1], for some initial conditions,  this system wanders off to <span><span class="MathJax_Preview">\pm \infty</span><script type="math/tex">\pm \infty</script></span> for some of the variables. Make sure that  you have a good realisation before using the orbit for anything.*</em></p>
+<p><em>Note: With the default parameters which are as in [1], for some initial conditions,  this system wanders off to <span><span class="MathJax_Preview">\pm \infty</span><script type="math/tex">\pm \infty</script></span> for some of the variables. Make sure that  you have a good realisation before using the orbit for anything.</em></p>
 <p><strong>Equations of motion</strong></p>
 <div>
 <div class="MathJax_Preview">
@@ -1898,7 +1898,7 @@ y_4(t+1) &= y_4(t)(r_4 - c_{34} y_3 - r_4 y_4)
 <ol>
 <li>Ye, Hao, et al. "Distinguishing time-delayed causal interactions using  convergent cross mapping." Scientific reports 5 (2015): 14750</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/logistic4.jl#L45-L72' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/logistic4.jl#L45-L72' class='documenter-source'>source</a><br></p>
 <p><a id='henon2d-1'></a></p>
 <h2 id="two-unidirectionally-coupled-henon-maps">Two unidirectionally coupled Henon maps</h2>
 <p><a id='CausalityTools.Systems.henon2-Tuple{}' href='#CausalityTools.Systems.henon2-Tuple{}'>#</a>
@@ -1931,7 +1931,7 @@ y_2(t+1) &= y_1(t)
 <ol>
 <li>Krakovská, A., Jakubík, J., Chvosteková, M., Coufal, D., Jajcay, N., &amp; Paluš, M. (2018).   Comparison of six methods for the detection of causality in a bivariate time series.   Physical Review E, 97(4), 042207.</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/henon2.jl#L41-L65' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/henon2.jl#L41-L65' class='documenter-source'>source</a><br></p>
 <p><a id='Strange,-nonchaotic-attractors-1'></a></p>
 <h2 id="strange-nonchaotic-attractors">Strange, nonchaotic attractors</h2>
 <p><a id='CausalityTools.Systems.anishchenko1-Tuple{}' href='#CausalityTools.Systems.anishchenko1-Tuple{}'>#</a>
@@ -1960,7 +1960,7 @@ dϕ &= (\phi + \omega ) \mod{1}
 <ol>
 <li>Anishchenko, Vadim S., and Galina I. Strelkova. "Irregular attractors."  Discrete dynamics in Nature and Society 2.1 (1998): 53-72.</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/anishchenko1.jl#L37-L58' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/anishchenko1.jl#L37-L58' class='documenter-source'>source</a><br></p>
 <p><a id='ikeda2d_bidir-1'></a></p>
 <h2 id="bidirectional-ikeda-map">Bidirectional Ikeda map</h2>
 <p><a id='CausalityTools.Systems.ikeda' href='#CausalityTools.Systems.ikeda'>#</a>
@@ -1990,7 +1990,7 @@ y(t+1) = \mu(y \cos{(\theta)} - c_{xy} x \sin{(\theta)}) - min(\dfrac{\sigma \ze
 <ol>
 <li>Cao, Liangyue, Alistair Mees, and Kevin Judd. "Modeling and predicting   non-stationary time series." International Journal of Bifurcation and   Chaos 7.08 (1997): 1823-1831.</li>
 </ol>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/systems/discretemaps/ikeda.jl#L39-L64' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/systems/discretemaps/ikeda.jl#L39-L64' class='documenter-source'>source</a><br></p>
                 
                   
                 

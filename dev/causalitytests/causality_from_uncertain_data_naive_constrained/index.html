@@ -1593,6 +1593,10 @@
                 <p><a id='causality_uncertain_naiveconstrained_resampling-1'></a></p>
 <h1 id="naive-constrained-resampling">Naive, constrained resampling</h1>
 <p>If you need to truncate the furnishing distributions of your uncertain datasets before  applying a causality test, use the following method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Uncertain data handling relies on the <a href="https://github.com/kahaaga/UncertainData.jl">UncertainData</a>. To use the resampling schemes, you need to load this package by first running <code>using UncertainData</code>  in the Julia console.</p>
+</div>
 <p><a id='ConstrainedTest-1'></a></p>
 <h2 id="constrainedtest">ConstrainedTest</h2>
 <p><a id='CausalityTools.CausalityTests.ConstrainedTest' href='#CausalityTools.CausalityTests.ConstrainedTest'>#</a>
@@ -1619,7 +1623,7 @@
 <span class="n">ctest</span> <span class="o">=</span> <span class="n">ConstrainedTest</span><span class="p">(</span><span class="n">CrossMappingTest</span><span class="p">(),</span> <span class="n">cs</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/causalitytests/highlevel_tests/ConstrainedTest.jl#L3-L33' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/causalitytests/highlevel_tests/ConstrainedTest.jl#L3-L33' class='documenter-source'>source</a><br></p>
 <p><a id='Call-signature-1'></a></p>
 <h2 id="call-signature">Call signature</h2>
 <p><a id='CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,ConstrainedTest}' href='#CausalityToolsBase.causality-Tuple{AbstractUncertainIndexValueDataset,AbstractUncertainIndexValueDataset,ConstrainedTest}'>#</a>
@@ -1631,7 +1635,7 @@
 
 <p>Apply a causality test of type <code>CT</code> to <code>test.n</code> independent  realisations of <code>source</code> and <code>target</code>, after first constraining  the supports of the uncertain values furnishing the datasets.</p>
 <p>See also <a href="./#CausalityTools.CausalityTests.ConstrainedTest"><code>ConstrainedTest</code></a>.</p>
-<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b5ac9959c4df570db83efcdce9d0f2d6ea8f75bd/src/causalitytests/highlevel_tests/causality_ConstrainedTest.jl#L1-L11' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/kahaaga/CausalityTools.jl/blob/b447c652f631f9b06d5d311209503428a78d2857/src/causalitytests/highlevel_tests/causality_ConstrainedTest.jl#L1-L11' class='documenter-source'>source</a><br></p>
                 
                   
                 
