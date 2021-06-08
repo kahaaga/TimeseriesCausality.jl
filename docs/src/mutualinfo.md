@@ -1,0 +1,5 @@
+# Mutual information
+
+```@docs
+mutualinfo
+```
